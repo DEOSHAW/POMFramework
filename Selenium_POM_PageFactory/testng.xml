@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SeleniumAutomation">
+<listeners>
+<listener class-name="Base.ListenersClass"/>
+</listeners>
+ <test name="Selenium">
+ <classes>
+ <class name="TestCases.CheckAssert" />
+ </classes>
+ </test>
+</suite>
