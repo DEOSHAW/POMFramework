@@ -43,7 +43,7 @@ public class Amazon {
 		action.moveToElement(Account_Lists).click(SignIn).build().perform();
 		Thread.sleep(5000);
 		Username.sendKeys("deoshaw3@gmail.com");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		Continue.click();
 		Amazon_Driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Password.sendKeys("Dd$03091991");
