@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-19T07:36:07Z" name="SeleniumAutomation" finished-at="2019-11-19T07:36:55Z" duration-ms="47894">
+  <suite started-at="2019-11-24T14:27:30Z" name="SeleniumAutomation" finished-at="2019-11-24T14:29:10Z" duration-ms="100104">
     <groups>
     </groups>
-    <test started-at="2019-11-19T07:36:07Z" name="Selenium" finished-at="2019-11-19T07:36:55Z" duration-ms="47894">
+    <test started-at="2019-11-24T14:27:30Z" name="Selenium" finished-at="2019-11-24T14:29:10Z" duration-ms="100104">
       <class name="TestCases.CheckAssert">
-        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-19T07:36:07Z" name="GetTestName" finished-at="2019-11-19T07:36:07Z" duration-ms="30" status="PASS">
+        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-24T14:27:30Z" name="GetTestName" finished-at="2019-11-24T14:27:30Z" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetTestName -->
-        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-19T07:36:07Z" name="LaunchBrowser" finished-at="2019-11-19T07:36:29Z" duration-ms="21627" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-24T14:27:30Z" name="LaunchBrowser" finished-at="2019-11-24T14:28:07Z" duration-ms="36727" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="SearchHotelsInAirBnb()[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-19T07:36:29Z" name="SearchHotelsInAirBnb" finished-at="2019-11-19T07:36:53Z" duration-ms="23878" status="PASS">
+        <test-method signature="SearchHotelsInAirBnb()[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-24T14:28:07Z" name="SearchHotelsInAirBnb" finished-at="2019-11-24T14:29:06Z" duration-ms="58885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchHotelsInAirBnb -->
-        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-19T07:36:53Z" name="CloseBrowser" finished-at="2019-11-19T07:36:55Z" duration-ms="2308" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.CheckAssert@66d3eec0]" started-at="2019-11-24T14:29:06Z" name="CloseBrowser" finished-at="2019-11-24T14:29:10Z" duration-ms="4428" status="PASS">
           <params>
             <param index="0">
               <value>
