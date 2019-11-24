@@ -9,17 +9,7 @@
         <artifactId>winium-webdriver</artifactId>
         <version>0.1.0-1</version>
     </dependency>
-    <dependency>
-<dependency>
-<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
-        </configuration>
-    </plugin>
-</dependency>
+ <dependency>   
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>6.14.3</version>
@@ -68,4 +58,17 @@
       <version>1.3.2</version>
     </dependency>
   </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>
+  				&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+  			</groupId>
+  			<artifactId>
+  				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+  			</artifactId>
+  			<version>&lt;source&gt;1.6&lt;/source&gt;</version>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
