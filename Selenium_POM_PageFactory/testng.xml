@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.CheckAssert" />
+ <class name="TestCases.GetPageSource" />
  </classes>
  </test>
 </suite>
