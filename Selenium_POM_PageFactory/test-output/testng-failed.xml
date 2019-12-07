@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SeleniumAutomation]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Base.ListenersClass"/>
+  </listeners>
   <test thread-count="5" name="Selenium(failed)">
     <classes>
       <class name="TestCases.CheckAssert">
