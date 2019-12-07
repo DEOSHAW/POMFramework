@@ -55,7 +55,7 @@ public class AirBnb {
 		Date.click();
 		Thread.sleep(2000);
 		Search.click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		Assert.assertEquals(Welcome_Text.getText(), "Explore London");
 		Assert.assertTrue(Welcome_Text.getText().equals("Explore London"), "Expected text not found");
 		//Assert.assertFalse(Welcome_Text.getText().equals("Explore London"), "Not Expected text found");
