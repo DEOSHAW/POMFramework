@@ -39,7 +39,7 @@ public class AirBnb {
 	{
 		
 		Location.sendKeys("London");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Location.sendKeys(Keys.ENTER);
 		CheckIn.click();
 		Thread.sleep(2000);
