@@ -29,6 +29,7 @@ public class Baseclass {
       {
 		Baseclass ob=new Baseclass();
 		testName = ob.getClass().getSimpleName();
+		System.out.println("Test name is: "+testName);
 
          // testName = this.getClass().getSimpleName();
 
@@ -76,7 +77,7 @@ public class Baseclass {
 	
 	
 	@BeforeMethod
-	 public void LaunchBrowser(Method m)
+	 public void LaunchBrowser(Method m) throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		driver=new ChromeDriver();
@@ -89,9 +90,11 @@ public class Baseclass {
 		//driver.get("http://demo.guru99.com/test/guru99home/scrolling.html");
 		//driver.navigate().to("https://www.naukri.com");
 		//driver.get("https://www.amazon.com");
-		driver.navigate().to("https://www.airbnb.co.in/");
+		//driver.navigate().to("https://www.airbnb.co.in/");
+		driver.navigate().to("http://newtours.demoaut.com/");
 		//driver.get("http://learn-automation.com/selenium-integration-with-jenkins/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		System.out.println(m.getName());
 		
 	}
