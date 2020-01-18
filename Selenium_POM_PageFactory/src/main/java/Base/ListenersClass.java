@@ -1,12 +1,14 @@
 package Base;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class ListenersClass implements ITestListener {
 
-	
+	WebDriver driver;
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
@@ -19,6 +21,9 @@ public class ListenersClass implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test Execution was UnSuccessful");
+		driver=new ChromeDriver();
+		driver.close();
+		System.out.println("Browser instance closed");
 		
 	}
 

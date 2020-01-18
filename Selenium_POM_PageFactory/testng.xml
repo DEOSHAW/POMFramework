@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.VerifyTextOnMercuryTourPage" />
+ <class name="TestCases.AutoIT_FileUpload" />
  </classes>
  </test>
 </suite>

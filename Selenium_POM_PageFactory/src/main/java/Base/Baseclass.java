@@ -91,7 +91,8 @@ public class Baseclass {
 		//driver.navigate().to("https://www.naukri.com");
 		//driver.get("https://www.amazon.com");
 		//driver.navigate().to("https://www.airbnb.co.in/");
-		driver.navigate().to("http://newtours.demoaut.com/");
+		//driver.navigate().to("http://newtours.demoaut.com/");//Mercury Tour
+		driver.get("https://www.gmail.com");
 		//driver.get("http://learn-automation.com/selenium-integration-with-jenkins/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
