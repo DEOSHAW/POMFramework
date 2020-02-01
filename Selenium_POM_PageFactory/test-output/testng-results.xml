@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-18T13:44:45Z" name="SeleniumAutomation" finished-at="2020-01-18T13:46:37Z" duration-ms="112290">
+  <suite started-at="2020-02-01T14:52:16Z" name="SeleniumAutomation" finished-at="2020-02-01T14:53:13Z" duration-ms="56793">
     <groups>
     </groups>
-    <test started-at="2020-01-18T13:44:45Z" name="Selenium" finished-at="2020-01-18T13:46:37Z" duration-ms="112290">
-      <class name="TestCases.AutoIT_FileUpload">
-        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.AutoIT_FileUpload@5ba3f27a]" started-at="2020-01-18T13:44:45Z" name="GetTestName" finished-at="2020-01-18T13:44:45Z" duration-ms="33" status="PASS">
+    <test started-at="2020-02-01T14:52:16Z" name="Selenium" finished-at="2020-02-01T14:53:13Z" duration-ms="56793">
+      <class name="TestCases.UltimatixImageSearch">
+        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.UltimatixImageSearch@21e360a]" started-at="2020-02-01T14:52:16Z" name="GetTestName" finished-at="2020-02-01T14:52:16Z" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetTestName -->
-        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.AutoIT_FileUpload@5ba3f27a]" started-at="2020-01-18T13:44:45Z" name="LaunchBrowser" finished-at="2020-01-18T13:45:14Z" duration-ms="29261" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.UltimatixImageSearch@21e360a]" started-at="2020-02-01T14:52:16Z" name="LaunchBrowser" finished-at="2020-02-01T14:53:10Z" duration-ms="54058" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.AutoIT_FileUpload.AutoIT_Test() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void TestCases.UltimatixImageSearch.SearchImage()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="AutoIT_Test()[pri:0, instance:TestCases.AutoIT_FileUpload@5ba3f27a]" started-at="2020-01-18T13:45:14Z" name="AutoIT_Test" finished-at="2020-01-18T13:46:34Z" duration-ms="80072" status="PASS">
+        <test-method signature="SearchImage()[pri:0, instance:TestCases.UltimatixImageSearch@21e360a]" started-at="2020-02-01T14:53:10Z" name="SearchImage" finished-at="2020-02-01T14:53:11Z" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AutoIT_Test -->
-        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.AutoIT_FileUpload@5ba3f27a]" started-at="2020-01-18T13:46:34Z" name="CloseBrowser" finished-at="2020-01-18T13:46:37Z" duration-ms="2863" status="PASS">
+        </test-method> <!-- SearchImage -->
+        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.UltimatixImageSearch@21e360a]" started-at="2020-02-01T14:53:11Z" name="CloseBrowser" finished-at="2020-02-01T14:53:13Z" duration-ms="2326" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AutoIT_Test status=SUCCESS method=AutoIT_FileUpload.AutoIT_Test()[pri:0, instance:TestCases.AutoIT_FileUpload@5ba3f27a] output={null}]]]>
+                <![CDATA[[TestResult name=SearchImage status=SUCCESS method=UltimatixImageSearch.SearchImage()[pri:0, instance:TestCases.UltimatixImageSearch@21e360a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- TestCases.AutoIT_FileUpload -->
+      </class> <!-- TestCases.UltimatixImageSearch -->
     </test> <!-- Selenium -->
   </suite> <!-- SeleniumAutomation -->
 </testng-results>

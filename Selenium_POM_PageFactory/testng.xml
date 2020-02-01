@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.AutoIT_FileUpload" />
+ <class name="TestCases.UltimatixImageSearch" />
  </classes>
  </test>
 </suite>

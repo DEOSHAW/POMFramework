@@ -28,7 +28,9 @@ public class Baseclass {
     public void GetTestName() throws Exception
       {
 		Baseclass ob=new Baseclass();
-		testName = ob.getClass().getSimpleName();
+		Class clazz=ob.getClass();
+		testName = clazz.getSimpleName();
+		//testName = ob.getClass().getSimpleName();
 		System.out.println("Test name is: "+testName);
 
          // testName = this.getClass().getSimpleName();
@@ -92,8 +94,9 @@ public class Baseclass {
 		//driver.get("https://www.amazon.com");
 		//driver.navigate().to("https://www.airbnb.co.in/");
 		//driver.navigate().to("http://newtours.demoaut.com/");//Mercury Tour
-		driver.get("https://www.gmail.com");
+		//driver.get("https://www.gmail.com");
 		//driver.get("http://learn-automation.com/selenium-integration-with-jenkins/");
+		driver.get("https://www.ultimatix.net");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println(m.getName());

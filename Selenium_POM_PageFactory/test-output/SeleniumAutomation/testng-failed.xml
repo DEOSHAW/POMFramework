@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="Selenium(failed)">
     <classes>
-      <class name="TestCases.AutoIT_FileUpload">
+      <class name="TestCases.UltimatixImageSearch">
         <methods>
           <include name="GetTestName"/>
-          <include name="AutoIT_Test"/>
           <include name="CloseBrowser"/>
+          <include name="SearchImage"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- TestCases.AutoIT_FileUpload -->
+      </class> <!-- TestCases.UltimatixImageSearch -->
     </classes>
   </test> <!-- Selenium(failed) -->
 </suite> <!-- Failed suite [SeleniumAutomation] -->
