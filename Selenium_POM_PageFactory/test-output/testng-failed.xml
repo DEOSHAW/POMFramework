@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="Selenium(failed)">
     <classes>
-      <class name="TestCases.UltimatixImageSearch">
+      <class name="TestCases.Search_Tiger_In_Leaderboard">
         <methods>
           <include name="GetTestName"/>
+          <include name="SearchTiger"/>
           <include name="CloseBrowser"/>
-          <include name="SearchImage"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- TestCases.UltimatixImageSearch -->
+      </class> <!-- TestCases.Search_Tiger_In_Leaderboard -->
     </classes>
   </test> <!-- Selenium(failed) -->
 </suite> <!-- Failed suite [SeleniumAutomation] -->
