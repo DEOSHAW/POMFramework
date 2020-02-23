@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.Search_Federer_Ranking" />
+ <class name="TestCases.AlertTest" />
  </classes>
  </test>
 </suite>

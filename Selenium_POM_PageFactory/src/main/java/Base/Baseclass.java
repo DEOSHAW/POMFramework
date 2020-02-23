@@ -1,16 +1,17 @@
 package Base;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
 import jxl.Sheet;
@@ -36,6 +37,13 @@ public class Baseclass {
          // testName = this.getClass().getSimpleName();
 
       }
+	
+	@BeforeTest
+	public void getMetaData()
+	{
+		System.out.println("This is Before test method");
+		//System.out.println(m.getName());
+	}
 
 
 	
@@ -98,9 +106,11 @@ public class Baseclass {
 		//driver.get("http://learn-automation.com/selenium-integration-with-jenkins/");
 		//driver.get("https://www.ultimatix.net");
 		//driver.get("https://www.pgatour.com/");
-		driver.navigate().to("https://www.atptour.com");
+		//driver.navigate().to("https://www.atptour.com");
+		driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		System.out.println("This is before method");
 		System.out.println(m.getName());
 		
 	}
