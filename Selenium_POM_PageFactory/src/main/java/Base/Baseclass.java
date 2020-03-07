@@ -104,10 +104,12 @@ public class Baseclass {
 		//driver.navigate().to("http://newtours.demoaut.com/");//Mercury Tour
 		//driver.get("https://www.gmail.com");
 		//driver.get("http://learn-automation.com/selenium-integration-with-jenkins/");
-		//driver.get("https://www.ultimatix.net");
+		driver.get("https://www.ultimatix.net");
 		//driver.get("https://www.pgatour.com/");
 		//driver.navigate().to("https://www.atptour.com");
-		driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
+		//driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
+		//driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
+		//driver.navigate().to("https://www.monsterindia.com/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");

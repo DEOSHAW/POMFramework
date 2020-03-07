@@ -34,7 +34,10 @@ public class AirBnb {
 	WebElement Search;
 	@FindBy(xpath="//*[contains(text(),'Explore London')]")
 	WebElement Welcome_Text;
-	
+	/**
+	 * 
+	 * @throws InterruptedException
+	 */
 	public void SearchForHotels() throws InterruptedException
 	{
 		

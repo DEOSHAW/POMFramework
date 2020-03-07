@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-23T10:56:56Z" name="Default suite" finished-at="2020-02-23T10:57:18Z" duration-ms="22750">
+  <suite started-at="2020-03-07T13:28:13Z" name="Default suite" finished-at="2020-03-07T13:29:30Z" duration-ms="76586">
     <groups>
     </groups>
-    <test started-at="2020-02-23T10:56:56Z" name="Default test" finished-at="2020-02-23T10:57:18Z" duration-ms="22750">
-      <class name="TestCases.AlertTest">
-        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.AlertTest@2c35e847]" started-at="2020-02-23T10:56:56Z" name="getMetaData" finished-at="2020-02-23T10:56:56Z" duration-ms="31" status="PASS">
+    <test started-at="2020-03-07T13:28:13Z" name="Default test" finished-at="2020-03-07T13:29:30Z" duration-ms="76586">
+      <class name="TestCases.Loginto_Ultimatix">
+        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="getMetaData" finished-at="2020-03-07T13:28:13Z" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMetaData -->
-        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.AlertTest@2c35e847]" started-at="2020-02-23T10:56:56Z" name="GetTestName" finished-at="2020-02-23T10:56:56Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="GetTestName" finished-at="2020-03-07T13:28:13Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetTestName -->
-        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.AlertTest@2c35e847]" started-at="2020-02-23T10:56:56Z" name="LaunchBrowser" finished-at="2020-02-23T10:57:11Z" duration-ms="15602" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="LaunchBrowser" finished-at="2020-03-07T13:28:25Z" duration-ms="11982" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.AlertTest.CheckAlertFunctions() throws java.lang.Exception]]>
+                <![CDATA[public void TestCases.Loginto_Ultimatix.Login() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="CheckAlertFunctions()[pri:0, instance:TestCases.AlertTest@2c35e847]" started-at="2020-02-23T10:57:11Z" name="CheckAlertFunctions" finished-at="2020-02-23T10:57:16Z" duration-ms="4910" status="PASS">
+        <test-method signature="Login()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:25Z" name="Login" finished-at="2020-03-07T13:29:27Z" duration-ms="62351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckAlertFunctions -->
-        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.AlertTest@2c35e847]" started-at="2020-02-23T10:57:16Z" name="CloseBrowser" finished-at="2020-02-23T10:57:18Z" duration-ms="2124" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:29:27Z" name="CloseBrowser" finished-at="2020-03-07T13:29:30Z" duration-ms="2214" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CheckAlertFunctions status=SUCCESS method=AlertTest.CheckAlertFunctions()[pri:0, instance:TestCases.AlertTest@2c35e847] output={null}]]]>
+                <![CDATA[[TestResult name=Login status=SUCCESS method=Loginto_Ultimatix.Login()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- TestCases.AlertTest -->
+      </class> <!-- TestCases.Loginto_Ultimatix -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

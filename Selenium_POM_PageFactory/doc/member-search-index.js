@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"Pages","c":"Amazon","l":"Amazon_Driver"},{"p":"Pages","c":"Amazon","l":"Amazon(WebDriver)","url":"%3Cinit%3E(org.openqa.selenium.WebDriver)"},{"p":"Pages","c":"Amazon","l":"LogIntoAmazon()"}]

@@ -36,7 +36,10 @@ public class Amazon {
 	@FindBy(xpath="//*[@id='nav-your-amazon-text']")
 	WebElement User;
 	
-	
+	/**
+	 * @param No parameter
+	 * @throws InterruptedException
+	 */
 	public void LogIntoAmazon() throws InterruptedException 
 	{
 		Actions action=new Actions(Amazon_Driver);

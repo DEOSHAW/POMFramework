@@ -39,7 +39,11 @@ public class Email_AutoIT {
 	WebElement Upload;
 	
 	
-	
+	/**
+	 * 
+	 * @throws InterruptedException
+	 * @throws IOException
+	 */
 	public void UploadThroughAutoIT() throws InterruptedException, IOException
 	{
 		Thread.sleep(5000);

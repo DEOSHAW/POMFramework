@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.AlertTest">
+      <class name="TestCases.Loginto_Ultimatix">
         <methods>
           <include name="GetTestName"/>
           <include name="getMetaData"/>
-          <include name="CheckAlertFunctions"/>
           <include name="CloseBrowser"/>
+          <include name="Login"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- TestCases.AlertTest -->
+      </class> <!-- TestCases.Loginto_Ultimatix -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
