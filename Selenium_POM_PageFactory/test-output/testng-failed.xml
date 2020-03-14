@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Loginto_Ultimatix">
+      <class name="TestCases.GoogleAutoSuggestiveDropdown">
         <methods>
           <include name="GetTestName"/>
           <include name="getMetaData"/>
+          <include name="Google"/>
           <include name="CloseBrowser"/>
-          <include name="Login"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- TestCases.Loginto_Ultimatix -->
+      </class> <!-- TestCases.GoogleAutoSuggestiveDropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

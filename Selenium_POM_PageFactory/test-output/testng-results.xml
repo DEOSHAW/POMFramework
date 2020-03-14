@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-07T13:28:13Z" name="Default suite" finished-at="2020-03-07T13:29:30Z" duration-ms="76586">
+  <suite started-at="2020-03-14T15:21:45Z" name="Default suite" finished-at="2020-03-14T15:22:25Z" duration-ms="40279">
     <groups>
     </groups>
-    <test started-at="2020-03-07T13:28:13Z" name="Default test" finished-at="2020-03-07T13:29:30Z" duration-ms="76586">
-      <class name="TestCases.Loginto_Ultimatix">
-        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="getMetaData" finished-at="2020-03-07T13:28:13Z" duration-ms="19" status="PASS">
+    <test started-at="2020-03-14T15:21:45Z" name="Default test" finished-at="2020-03-14T15:22:25Z" duration-ms="40279">
+      <class name="TestCases.GoogleAutoSuggestiveDropdown">
+        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813]" started-at="2020-03-14T15:21:45Z" name="getMetaData" finished-at="2020-03-14T15:21:45Z" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMetaData -->
-        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="GetTestName" finished-at="2020-03-07T13:28:13Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813]" started-at="2020-03-14T15:21:45Z" name="GetTestName" finished-at="2020-03-14T15:21:45Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetTestName -->
-        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:13Z" name="LaunchBrowser" finished-at="2020-03-07T13:28:25Z" duration-ms="11982" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813]" started-at="2020-03-14T15:21:45Z" name="LaunchBrowser" finished-at="2020-03-14T15:22:10Z" duration-ms="25291" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.Loginto_Ultimatix.Login() throws java.lang.InterruptedException]]>
+                <![CDATA[void TestCases.GoogleAutoSuggestiveDropdown.Google() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="Login()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:28:25Z" name="Login" finished-at="2020-03-07T13:29:27Z" duration-ms="62351" status="PASS">
+        <test-method signature="Google()[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813]" started-at="2020-03-14T15:22:10Z" name="Google" finished-at="2020-03-14T15:22:23Z" duration-ms="12672" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847]" started-at="2020-03-07T13:29:27Z" name="CloseBrowser" finished-at="2020-03-07T13:29:30Z" duration-ms="2214" status="PASS">
+        </test-method> <!-- Google -->
+        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813]" started-at="2020-03-14T15:22:23Z" name="CloseBrowser" finished-at="2020-03-14T15:22:25Z" duration-ms="2236" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=Loginto_Ultimatix.Login()[pri:0, instance:TestCases.Loginto_Ultimatix@2c35e847] output={null}]]]>
+                <![CDATA[[TestResult name=Google status=SUCCESS method=GoogleAutoSuggestiveDropdown.Google()[pri:0, instance:TestCases.GoogleAutoSuggestiveDropdown@7c24b813] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- TestCases.Loginto_Ultimatix -->
+      </class> <!-- TestCases.GoogleAutoSuggestiveDropdown -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

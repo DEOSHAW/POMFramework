@@ -48,12 +48,18 @@ public class UltimatixRevampedPage {
 		TextPrompt.getText();
 		Assert.assertEquals(TextPrompt.getText(), "Still using password? Please wait for it to be enabled...","Password assertion did not  match");
 		WebDriverWait wait=new WebDriverWait(Ultimatix_driver,60);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(text(),'Still using password?')]")));
+		boolean bool=wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(text(),'Still using password?')]")));
+		if(bool)
+		{
+			
 		PasswordField.sendKeys("Devanshi@1991");
 		Thread.sleep(2000);
 		Login.click();
 		String EmpName=wait.until(ExpectedConditions.visibilityOf(EmployeeName)).getText();
 		Assert.assertTrue(EmpName.contains("Deo"), "Name did n't match");
+		
+		}
+		
 		
 		
 	}

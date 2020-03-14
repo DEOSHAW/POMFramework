@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.Loginto_Ultimatix" />
+ <class name="TestCases.GoogleAutoSuggestiveDropdown" />
  </classes>
  </test>
 </suite>
