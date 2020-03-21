@@ -110,7 +110,8 @@ public class Baseclass {
 		//driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
 		//driver.navigate().to("http://demo.guru99.com/test/delete_customer.php");
 		//driver.navigate().to("https://www.monsterindia.com/");
-		driver.get("https://www.google.com");
+		//driver.get("https://www.google.com");
+		driver.get("https://www.spicejet.com/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");
