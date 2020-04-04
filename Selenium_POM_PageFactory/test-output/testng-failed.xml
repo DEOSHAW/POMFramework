@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.SpiceJetFlightBooking">
+      <class name="TestCases.FindCoronaCount">
         <methods>
-          <include name="BookFlight"/>
           <include name="GetTestName"/>
           <include name="getMetaData"/>
+          <include name="FindCount"/>
           <include name="CloseBrowser"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- TestCases.SpiceJetFlightBooking -->
+      </class> <!-- TestCases.FindCoronaCount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-21T06:15:53Z" name="Default suite" finished-at="2020-03-21T06:16:48Z" duration-ms="54907">
+  <suite started-at="2020-04-04T07:16:24Z" name="Default suite" finished-at="2020-04-04T07:19:13Z" duration-ms="169583">
     <groups>
     </groups>
-    <test started-at="2020-03-21T06:15:53Z" name="Default test" finished-at="2020-03-21T06:16:48Z" duration-ms="54907">
-      <class name="TestCases.SpiceJetFlightBooking">
-        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b]" started-at="2020-03-21T06:15:53Z" name="getMetaData" finished-at="2020-03-21T06:15:53Z" duration-ms="23" status="PASS">
+    <test started-at="2020-04-04T07:16:24Z" name="Default test" finished-at="2020-04-04T07:19:13Z" duration-ms="169583">
+      <class name="TestCases.FindCoronaCount">
+        <test-method is-config="true" signature="getMetaData()[pri:0, instance:TestCases.FindCoronaCount@7bd4937b]" started-at="2020-04-04T07:16:24Z" name="getMetaData" finished-at="2020-04-04T07:16:24Z" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMetaData -->
-        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b]" started-at="2020-03-21T06:15:53Z" name="GetTestName" finished-at="2020-03-21T06:15:53Z" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="GetTestName()[pri:0, instance:TestCases.FindCoronaCount@7bd4937b]" started-at="2020-04-04T07:16:24Z" name="GetTestName" finished-at="2020-04-04T07:16:24Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetTestName -->
-        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b]" started-at="2020-03-21T06:15:53Z" name="LaunchBrowser" finished-at="2020-03-21T06:16:11Z" duration-ms="17472" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.FindCoronaCount@7bd4937b]" started-at="2020-04-04T07:16:24Z" name="LaunchBrowser" finished-at="2020-04-04T07:17:45Z" duration-ms="81327" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.SpiceJetFlightBooking.BookFlight() throws java.lang.InterruptedException]]>
+                <![CDATA[public void TestCases.FindCoronaCount.FindCount()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="BookFlight()[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b]" started-at="2020-03-21T06:16:11Z" name="BookFlight" finished-at="2020-03-21T06:16:46Z" duration-ms="35269" status="PASS">
+        <test-method signature="FindCount()[pri:0, instance:TestCases.FindCoronaCount@7bd4937b]" started-at="2020-04-04T07:17:45Z" name="FindCount" finished-at="2020-04-04T07:19:10Z" duration-ms="84348" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BookFlight -->
-        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b]" started-at="2020-03-21T06:16:46Z" name="CloseBrowser" finished-at="2020-03-21T06:16:48Z" duration-ms="2098" status="PASS">
+        </test-method> <!-- FindCount -->
+        <test-method is-config="true" signature="CloseBrowser(org.testng.ITestResult)[pri:0, instance:TestCases.FindCoronaCount@7bd4937b]" started-at="2020-04-04T07:19:10Z" name="CloseBrowser" finished-at="2020-04-04T07:19:13Z" duration-ms="3794" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BookFlight status=SUCCESS method=SpiceJetFlightBooking.BookFlight()[pri:0, instance:TestCases.SpiceJetFlightBooking@7bd4937b] output={null}]]]>
+                <![CDATA[[TestResult name=FindCount status=SUCCESS method=FindCoronaCount.FindCount()[pri:0, instance:TestCases.FindCoronaCount@7bd4937b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- TestCases.SpiceJetFlightBooking -->
+      </class> <!-- TestCases.FindCoronaCount -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
