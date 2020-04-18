@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -24,17 +26,19 @@ public class Baseclass {
 	
 	public WebDriver driver=null;
 	String testName;
+	String classTestName;
 	
 	@BeforeClass
     public void GetTestName() throws Exception
       {
 		Baseclass ob=new Baseclass();
 		Class clazz=ob.getClass();
-		testName = clazz.getSimpleName();
+		//testName = clazz.getSimpleName();
 		//testName = ob.getClass().getSimpleName();
-		System.out.println("Test name is: "+testName);
+		//System.out.println("Test name is: "+testName);
 
-         // testName = this.getClass().getSimpleName();
+		classTestName = this.getClass().getSimpleName();
+         System.out.println("Class Name is: "+classTestName);
 
       }
 	
@@ -42,11 +46,11 @@ public class Baseclass {
 	public void getMetaData()
 	{
 		System.out.println("This is Before test method");
-		//System.out.println(m.getName());
+		
 	}
 
 
-	
+	//This method uses JEXCEL API
 	@DataProvider(name="DataSupplier")
 	public Object[][] GetData() throws BiffException, IOException
 	{
@@ -56,7 +60,7 @@ public class Baseclass {
         System.out.println(testName);
 
         //HashMap<String[],Object[][]> datamap=new HashMap<String[],Object[][]>();
-        FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\Selenium_POM_PageFactory\\src\\test\\resources\\"+testName+".xls");
+        FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\"+classTestName+".xlsx");
         //FileInputStream fis=new FileInputStream("C:\\Users\\856520\\IdeaProjects\\Selenium1\\src\\main\\Resources\\TestData\\SearchItemAndPlaceOrder.xls");
         Workbook wb=Workbook.getWorkbook(fis);
         Sheet sh=wb.getSheet(0);
@@ -77,6 +81,45 @@ public class Baseclass {
         for(i=0;i<row;i++)
             for(j=0;j<col;j++)
                 System.out.println(data[i][j]);
+
+        //return data1;
+        return data1;
+
+
+		
+	}
+	//This method uses Apache POI
+	@DataProvider(name="DataSupplierWithPoi")
+	public Object[][] GetDataForLogin() throws BiffException, IOException
+	{
+		
+		
+		int i,j;
+       
+
+        //HashMap<String[],Object[][]> datamap=new HashMap<String[],Object[][]>();
+        FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\"+classTestName+".xlsx");
+        XSSFWorkbook wb=new XSSFWorkbook(fis);
+        XSSFSheet sh=wb.getSheetAt(0);
+        int row=sh.getLastRowNum();
+        int col=sh.getRow(0).getLastCellNum();
+        
+        Object[][] data=new Object[row+1][col];
+        Object[][] data1=new Object[row][col];
+       System.out.println("Values are: ");
+        for(i=0;i<row+1;i++) {
+            for (j = 0; j < col; j++) {
+                data[i][j] = sh.getRow(i).getCell(j).getStringCellValue();
+                System.out.println(data[i][j]);
+            }
+        }
+        for(i=0;i<row;i++)
+            for(j=0;j<col;j++)
+                data1[i][j]=data[i+1][j];
+
+        for(i=0;i<row;i++)
+            for(j=0;j<col;j++)
+                System.out.println(data1[i][j]);
 
         //return data1;
         return data1;
@@ -113,11 +156,15 @@ public class Baseclass {
 		//driver.get("https://www.google.com");
 		//driver.get("https://www.spicejet.com/");
 		//driver.get("http://www.airindia.in/");
-		driver.get("https://www.worldometers.info/coronavirus/");
+		//driver.get("https://www.worldometers.info/coronavirus/");
+		//driver.get("https://www.caltech.edu/");
+		driver.get("https://www.qatarairways.com/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");
-		System.out.println(m.getName());
+		testName=m.getName();
+		System.out.println(testName);
+		
 		
 	}
 	

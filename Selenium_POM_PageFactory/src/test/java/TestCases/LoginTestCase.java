@@ -19,7 +19,7 @@ public class LoginTestCase extends Baseclass  {
 	
 	
 	
-	@Test(dataProvider="DataSupplier")
+	@Test(dataProvider="DataSupplierWithPoi")
 	public void Login(String Username,String Password) throws InterruptedException, AWTException
 	{
 		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
