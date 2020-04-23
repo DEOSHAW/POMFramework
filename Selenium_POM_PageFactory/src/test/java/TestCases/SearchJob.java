@@ -12,7 +12,6 @@ public class SearchJob extends Baseclass {
 	{
 	   
 	   MonsterIndia ob=new MonsterIndia(driver);
-	   
 	   ob.LookForJob();
 		
 	}
