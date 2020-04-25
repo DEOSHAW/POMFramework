@@ -10,11 +10,15 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 import jxl.Sheet;
 import jxl.Workbook;
@@ -27,6 +31,8 @@ public class Baseclass {
 	public WebDriver driver=null;
 	String testName;
 	String classTestName;
+	public ExtentTest test;
+	public ExtentReports report;
 	
 	@BeforeClass
     public void GetTestName() throws Exception
@@ -39,6 +45,8 @@ public class Baseclass {
 
 		classTestName = this.getClass().getSimpleName();
          System.out.println("Class Name is: "+classTestName);
+         report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+         test = report.startTest(classTestName);
 
       }
 	
@@ -157,8 +165,9 @@ public class Baseclass {
 		//driver.get("https://www.spicejet.com/");
 		//driver.get("http://www.airindia.in/");
 		//driver.get("https://www.worldometers.info/coronavirus/");
-		//driver.get("https://www.caltech.edu/");
-		driver.get("https://www.qatarairways.com/");
+		driver.get("https://www.caltech.edu/");
+		//driver.get("https://www.qatarairways.com/");
+		//driver.get("https://www.linkedin.com/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");
@@ -183,6 +192,13 @@ public class Baseclass {
 		driver.quit();
 		
 		
+	}
+	
+	@AfterClass
+	public void endTest()
+	{
+		report.endTest(test);
+		report.flush();
 	}
 
 }
