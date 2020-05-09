@@ -16,7 +16,7 @@ public class AirIndiaTest extends Baseclass {
 	@Test
 	void AIR_Test() throws InterruptedException, IOException
 	{
-		AirIndia ob=new AirIndia(driver);
+		AirIndia ob=new AirIndia(driver,test);
 		ob.GetTollNumber();
 		
 	}

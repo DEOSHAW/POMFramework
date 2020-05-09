@@ -12,8 +12,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
@@ -31,8 +33,14 @@ public class Baseclass {
 	public WebDriver driver=null;
 	String testName;
 	String classTestName;
-	public ExtentTest test;
-	public ExtentReports report;
+	public static ExtentTest test;
+	public static ExtentReports report;
+	
+	@BeforeSuite
+	public void getHtmlExtentReport()
+	{
+		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+	}
 	
 	@BeforeClass
     public void GetTestName() throws Exception
@@ -43,10 +51,10 @@ public class Baseclass {
 		//testName = ob.getClass().getSimpleName();
 		//System.out.println("Test name is: "+testName);
 
-		classTestName = this.getClass().getSimpleName();
+		 classTestName = this.getClass().getSimpleName();
          System.out.println("Class Name is: "+classTestName);
-         report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
-         test = report.startTest(classTestName);
+         //report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+         
 
       }
 	
@@ -140,6 +148,8 @@ public class Baseclass {
 	@BeforeMethod
 	 public void LaunchBrowser(Method m) throws InterruptedException
 	{
+		
+		test = report.startTest(classTestName);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -165,14 +175,17 @@ public class Baseclass {
 		//driver.get("https://www.spicejet.com/");
 		//driver.get("http://www.airindia.in/");
 		//driver.get("https://www.worldometers.info/coronavirus/");
-		driver.get("https://www.caltech.edu/");
+		//driver.get("https://www.caltech.edu/");
 		//driver.get("https://www.qatarairways.com/");
 		//driver.get("https://www.linkedin.com/");
+		//driver.navigate().to("http://aot.edu.in/");
+		driver.navigate().to("http://demo.automationtesting.in/WebTable.html");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");
 		testName=m.getName();
 		System.out.println(testName);
+		
 		
 		
 	}
@@ -190,6 +203,8 @@ public class Baseclass {
 			System.out.println("Script Failed");
 		}
 		driver.quit();
+		report.endTest(test);
+		System.out.println("Test Ended");
 		
 		
 	}
@@ -197,7 +212,15 @@ public class Baseclass {
 	@AfterClass
 	public void endTest()
 	{
-		report.endTest(test);
+		
+		//report.flush();
+	}
+	
+	@AfterSuite
+	public void endReport()
+	{
+		//report.endTest(test);
+		
 		report.flush();
 	}
 

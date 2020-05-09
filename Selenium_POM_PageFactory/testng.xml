@@ -5,7 +5,8 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.LoginTestCase" />
+ <class name="TestCases.AlertTest" />
+ <class name="TestCases.AirIndiaTest" />
  </classes>
  </test>
 </suite>

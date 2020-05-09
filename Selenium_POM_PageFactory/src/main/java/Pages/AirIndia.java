@@ -16,14 +16,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 public class AirIndia {
 	
 	WebDriver Air_Driver;
+	ExtentTest test;
 	
-	public AirIndia(WebDriver driver)
+	public AirIndia(WebDriver driver,ExtentTest test)
 	{
 		Air_Driver=driver;
 		PageFactory.initElements(Air_Driver,this);
+		this.test=test;
 		
 	}
 	
@@ -39,16 +44,20 @@ public class AirIndia {
 	
 	public void GetTollNumber() throws InterruptedException, IOException
 	{
+		test.log(LogStatus.PASS, "Test started");
 		String MainWindow=Air_Driver.getWindowHandle();
+		test.log(LogStatus.PASS, "Clicked on Check In");
 		Select Toll=new Select(Helpline);
 		Toll.selectByIndex(3);
 		Thread.sleep(5000);
 		JavascriptExecutor js=(JavascriptExecutor)Air_Driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",CheckIn);
+		test.log(LogStatus.PASS, "Clicked on Check In");
 		Thread.sleep(5000);
 		CheckIn.click();
 		Thread.sleep(5000);
 		Set<String> Windows=Air_Driver.getWindowHandles();
+		test.log(LogStatus.PASS, "Extracted Window Handles");
 		Iterator itr=Windows.iterator();
 		while(itr.hasNext())
 		{

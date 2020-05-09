@@ -19,6 +19,7 @@ public class Linkedin {
 	ExtentTest test1;
 	
 	
+	
 	public Linkedin(WebDriver driver,ExtentTest test)
 	{
 		Linkedin_Driver=driver;
@@ -42,6 +43,8 @@ public class Linkedin {
 	
 	public void searchProfile()
 	{
+		String skill = null;
+		String name;
 		wait.until(ExpectedConditions.visibilityOf(signIn));
 		seleniumUtilities.jsClick(Linkedin_Driver,signIn);
 		test1.log(LogStatus.PASS, "Clicked on Sign In");
@@ -53,12 +56,28 @@ public class Linkedin {
 		test1.log(LogStatus.PASS, "Entered Password");
 		wait.until(ExpectedConditions.visibilityOf(signIn));
 		seleniumUtilities.jsClick(Linkedin_Driver,signIn);
-		test1.log(LogStatus.PASS, "Logged in");
+		test1.log(LogStatus.FAIL, "Logged in");
+		try
+		{
 		seleniumUtilities.jsClick(Linkedin_Driver,Name);
-		String name=Name.getText();
-		String skill=Skill.getText();
-		test1.log(LogStatus.PASS, "Extracted Skill details");
+		name=Name.getText();
+		skill=Skill.getText();
 		System.out.println("Name: "+name+" Skill: "+skill);
+		}
+		catch(Exception e)
+		{
+		if(skill.length()>0)
+		{
+		test1.log(LogStatus.PASS, "Extracted Skill details");
+		}
+		else
+		{
+			test1.log(LogStatus.FAIL, "Extracted Skill details");	
+		}
+		
+		}
+		
+		
 		
 		
 		
