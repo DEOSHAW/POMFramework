@@ -1,14 +1,17 @@
 package Base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -39,7 +42,7 @@ public class Baseclass {
 	@BeforeSuite
 	public void getHtmlExtentReport()
 	{
-		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+		report = new ExtentReports(System.getProperty("user.dir")+File.separator+"ExtentReportResults.html");
 	}
 	
 	@BeforeClass
@@ -151,8 +154,12 @@ public class Baseclass {
 		
 		test = report.startTest(classTestName);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
+		System.setProperty("webdriver.chrome.silentOutput", "true");
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
+		driver=new ChromeDriver(options);
+		//driver.manage().window().maximize();
 		//driver.get("https://www.amazon.com");
 		//driver.navigate().to("http://demo.guru99.com/test/guru99home/");
 		//driver.navigate().to("https://www.hdfc.com");
@@ -179,8 +186,9 @@ public class Baseclass {
 		//driver.get("https://www.qatarairways.com/");
 		//driver.get("https://www.linkedin.com/");
 		//driver.navigate().to("http://aot.edu.in/");
-		driver.navigate().to("http://demo.automationtesting.in/WebTable.html");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.navigate().to("http://demo.automationtesting.in/WebTable.html");
+		//driver.navigate().to("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		System.out.println("This is before method");
 		testName=m.getName();
@@ -202,7 +210,7 @@ public class Baseclass {
 		{
 			System.out.println("Script Failed");
 		}
-		driver.quit();
+		//driver.quit();
 		report.endTest(test);
 		System.out.println("Test Ended");
 		
