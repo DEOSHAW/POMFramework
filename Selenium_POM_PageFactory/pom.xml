@@ -82,6 +82,16 @@
                  <artifactId>extentreports</artifactId>
     <version>2.41.2</version>
 </dependency>
+<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>javase</artifactId>
+    <version>3.4.0</version>
+</dependency>
+<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>core</artifactId>
+    <version>3.4.0</version>
+</dependency>
     </dependencies>
     <build>
     <plugins>
@@ -102,6 +112,19 @@
             <suiteXmlFile>C:\Users\Bishal\git\POM_Framework\Selenium_POM_PageFactory\testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M4</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 </plugins>
 </build>

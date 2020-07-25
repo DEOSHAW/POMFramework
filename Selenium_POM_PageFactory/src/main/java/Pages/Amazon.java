@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.Assert;
 
 public class Amazon {
@@ -41,7 +42,7 @@ public class Amazon {
 	 * @throws InterruptedException
 	 */
 	public void LogIntoAmazon() throws InterruptedException 
-	{
+	{ 
 		Actions action=new Actions(Amazon_Driver);
 		action.moveToElement(Account_Lists).click(SignIn).build().perform();
 		Thread.sleep(5000);

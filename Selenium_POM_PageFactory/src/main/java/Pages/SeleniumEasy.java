@@ -1,9 +1,16 @@
 package Pages;
 
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ByIdOrName;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,6 +25,7 @@ public class SeleniumEasy {
 	WebDriver EasyDriver;
 	public ExtentTest test;
 	JavascriptExecutor js=null;
+	WebDriverWait wait=null;
 	
 	
 	public SeleniumEasy(WebDriver driver,ExtentTest test)
@@ -25,15 +33,24 @@ public class SeleniumEasy {
 		EasyDriver=driver;
 		this.test=test;
 		PageFactory.initElements(EasyDriver, this);
+		wait=new WebDriverWait(EasyDriver,10);
 		
 	}
 	
+	
+	@FindBy(how=How.XPATH,using="//select[@class='form-control pickListSelect pickData']")
+	WebElement List;
+	@FindBy(how=How.XPATH,using="//button[normalize-space(text())='Add']")
+	WebElement addButton;
+	@FindBy(how=How.XPATH,using="//*[@class='form-control pickListSelect pickListResult']")
+	WebElement secondList;
 	@FindBy(id="select-demo")
 	WebElement singleselectDropdown;
 	@FindBy(id="multi-select")
 	WebElement multipleselectDropdown;
 	@FindBy(xpath="//*[contains(normalize-space(text()),'Input form')]")
 	WebElement PageText;
+	//@FindBy(xpath="//*[@placeholder='First Name']")
 	@FindBy(xpath="//*[@placeholder='First Name']")
 	WebElement firstName;
 	@FindBy(xpath="//*[@placeholder='Last Name']")
@@ -58,6 +75,8 @@ public class SeleniumEasy {
 	WebElement sendButton;
 	@FindBy(xpath="//*[text()='State']/following::select")
 	WebElement StateDropdown;
+	@FindBy(xpath="//*[@onclick='myAlertFunction()']")
+	WebElement clickMeButton;
 	
 	
 	public void selectValuesFromDropdown()
@@ -88,6 +107,8 @@ public class SeleniumEasy {
 	
 	public void FillDataInForm()
 	{
+		try
+		{
 		WebDriverWait wait=new WebDriverWait(EasyDriver,10);
 		wait.until(ExpectedConditions.visibilityOf(firstName));
 		js=(JavascriptExecutor)EasyDriver;
@@ -108,7 +129,55 @@ public class SeleniumEasy {
 		test.log(LogStatus.PASS, "Form submitted");
 		Assert.assertEquals(PageText.getText(), "Input form with validations");
 		test.log(LogStatus.PASS, "Assertion got passed");
+		}
+		catch(Exception e)
+		{
+			Assert.assertTrue(false);
+			
+		}
 		
+	}
+	
+	public void HandleAlert() throws InterruptedException
+	{
+		
+		wait.until(ExpectedConditions.visibilityOf(clickMeButton));
+		clickMeButton.click();
+		test.log(LogStatus.PASS, "Alert Encountered");
+		Alert alert=EasyDriver.switchTo().alert();
+		System.out.println("Alert says: "+alert.getText());
+		test.log(LogStatus.PASS, "Alert Message captured");
+		Thread.sleep(2000);
+		alert.accept();
+		test.log(LogStatus.PASS, "Alert Handled");
+		Thread.sleep(2000);
+		
+		
+	}
+	
+	public void HandlejQueryList() throws InterruptedException
+	{
+		 Select jqueryList=new Select(List);
+		    if(jqueryList.isMultiple())
+		    {
+		    	jqueryList.selectByVisibleText("Isis");
+		    	Thread.sleep(2000);
+		    	jqueryList.selectByVisibleText("Manuela");
+		    	Thread.sleep(2000);
+		    	EasyDriver.findElement(By.xpath("//button[normalize-space(text())='Add']")).click();
+		    	Thread.sleep(2000);
+		    	test.log(LogStatus.PASS, "Selected names from dropdown");
+		    }
+		    
+		    Select destList=new Select(secondList);
+			  List<WebElement> list=destList.getOptions();
+			  Iterator<WebElement> itr=list.iterator();
+			  while(itr.hasNext())
+			  {
+				 String text=itr.next().getText();
+				 System.out.println(text);
+			  }
+			  test.log(LogStatus.PASS, "Verified the selected entries in the destination list");
 	}
 
 }
