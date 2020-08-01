@@ -114,29 +114,32 @@ public class Baseclass {
 		
 		
 		int i,j;
+		int row=0;
+		int col=0;
        
 
         //HashMap<String[],Object[][]> datamap=new HashMap<String[],Object[][]>();
         FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\"+classTestName+".xlsx");
         XSSFWorkbook wb=new XSSFWorkbook(fis);
-        XSSFSheet sh=wb.getSheetAt(0);
-        int row=sh.getLastRowNum();
-        int col=sh.getRow(0).getLastCellNum();
+        XSSFSheet sh=wb.getSheetAt(1);
+        row=sh.getLastRowNum();
+        row=row+1;
+        col=sh.getRow(0).getLastCellNum();
         
-        Object[][] data=new Object[row+1][col];
-        Object[][] data1=new Object[row][col];
+        Object[][] data=new Object[row][col];
+        Object[][] data1=new Object[row-1][col];
        System.out.println("Values are: ");
-        for(i=0;i<row+1;i++) {
+        for(i=0;i<row;i++) {
             for (j = 0; j < col; j++) {
                 data[i][j] = sh.getRow(i).getCell(j).getStringCellValue();
                 System.out.println(data[i][j]);
             }
         }
-        for(i=0;i<row;i++)
+        for(i=0;i<row-1;i++)
             for(j=0;j<col;j++)
                 data1[i][j]=data[i+1][j];
 
-        for(i=0;i<row;i++)
+        for(i=0;i<row-1;i++)
             for(j=0;j<col;j++)
                 System.out.println(data1[i][j]);
 
