@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.BarCodeAutomation" />
+ <class name="TestCases.PickCalendarDate" />
  </classes>
  </test>
 </suite>
