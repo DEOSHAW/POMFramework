@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class GitHub {
 	
@@ -55,12 +56,14 @@ public class GitHub {
 		Thread.sleep(1500);
 		js.executeScript("arguments[0].value='Devanshi@03';", Password);
 		js.executeScript("arguments[0].click();", Login);
+		test.log(LogStatus.PASS, "Login Successful");
 		wait.until(ExpectedConditions.visibilityOf(viewProfile));
 		action.moveToElement(viewProfile).click(viewProfile).build().perform();
 		wait.until(ExpectedConditions.visibilityOf(yourRepositories));
 		yourRepositories.click();
 		int repoCount=Integer.parseInt(Repositories.getText());
 		System.out.println("Number Of Repositories is: "+repoCount);
+		test.log(LogStatus.PASS, "Repository count is: "+repoCount);
 		
 		
 	}
