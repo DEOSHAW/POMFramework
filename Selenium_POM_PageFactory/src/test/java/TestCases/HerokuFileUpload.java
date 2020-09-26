@@ -11,11 +11,11 @@ public class HerokuFileUpload extends Baseclass {
 	@Test
 	public void doFileUpload()
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://the-internet.herokuapp.com/upload");
+		
+		seleniumUtilities.LaunchBrowser("https://the-internet.herokuapp.com/upload",driver);
 		Heroku heroku=new Heroku(driver,test);
 		heroku.uploadFile();
-		ob.closeBrowser();
+	
 		
 	}
 

@@ -12,11 +12,11 @@ public class postmanAutomation extends Baseclass {
 	@Test
 	public void getDetails()
 	{
-	seleniumUtilities ob1=new seleniumUtilities(driver);
-	ob1.LaunchBrowser("https://www.postman.com/");
+
+	seleniumUtilities.LaunchBrowser("https://www.postman.com/",driver);
 	postman ob=new postman(driver,test);
     ob.getAutomationDetails();
-    ob1.closeBrowser();
+
 	}
 
 }

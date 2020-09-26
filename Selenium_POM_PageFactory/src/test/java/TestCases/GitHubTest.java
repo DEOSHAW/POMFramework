@@ -12,11 +12,11 @@ public class GitHubTest extends Baseclass {
 	public void GitHubRepositoryTest() throws InterruptedException
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://github.com/");
+		
+		seleniumUtilities.LaunchBrowser("https://github.com/",driver);
 		GitHub profile=new GitHub(driver,test);
 		profile.getRepositoryCount();
-		ob.closeBrowser();
+		
 		
 	}
 

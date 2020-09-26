@@ -11,11 +11,11 @@ public class HandlingJQueryList extends Baseclass {
 	@Test
 	public void jQueryTest() throws InterruptedException
 	{
-	seleniumUtilities util=new seleniumUtilities(driver);
-	util.LaunchBrowser("https://www.seleniumeasy.com/test/jquery-dual-list-box-demo.html");
+
+	seleniumUtilities.LaunchBrowser("https://www.seleniumeasy.com/test/jquery-dual-list-box-demo.html",driver);
 	SeleniumEasy ob=new SeleniumEasy(driver,test);
 	ob.HandlejQueryList();
-	util.closeBrowser();
+
 	}
 
 }

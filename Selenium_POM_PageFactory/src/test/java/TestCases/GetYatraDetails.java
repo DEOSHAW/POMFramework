@@ -13,11 +13,11 @@ public class GetYatraDetails extends Baseclass{
 	@Test
 	void GetYatraInfo()
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://www.maavaishnodevi.org/");
+		
+		seleniumUtilities.LaunchBrowser("https://www.maavaishnodevi.org/",driver);
 		VaishnoDevi ob1=new VaishnoDevi(driver,test);
 		ob1.getDetails();
-		ob.closeBrowser();
+		
 		
 	}
 	

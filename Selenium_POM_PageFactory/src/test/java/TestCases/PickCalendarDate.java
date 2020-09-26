@@ -13,12 +13,12 @@ public class PickCalendarDate extends Baseclass {
 	public void pickPartcularDate() throws InterruptedException
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://phptravels.net/");
+	
+		seleniumUtilities.LaunchBrowser("https://phptravels.net/",driver);
 		phpTravels travel=new phpTravels(driver,test);
 		travel.selectCheckInDate("November", "8");
 		travel.selectCheckOutDate("November", "12");
-		ob.closeBrowser();
+
 		
 	}
 

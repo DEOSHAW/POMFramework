@@ -213,7 +213,7 @@ public class Baseclass {
 		{
 			System.out.println("Script Failed");
 		}
-		//driver.quit();
+		driver.close();
 		report.endTest(test);
 		System.out.println("Test Ended");
 		

@@ -12,11 +12,10 @@ public class FindCaltechPrograms extends Baseclass {
 	@Test
 	public void SearchPrograms()
 	{
-		seleniumUtilities util=new seleniumUtilities(driver);
-		util.LaunchBrowser("https://www.caltech.edu/");
+		seleniumUtilities.LaunchBrowser("https://www.caltech.edu/",driver);
 		Caltech ob=new Caltech(driver);
 		ob.FindGradPrograms();
-		util.closeBrowser();
+		
 		
 	}
 

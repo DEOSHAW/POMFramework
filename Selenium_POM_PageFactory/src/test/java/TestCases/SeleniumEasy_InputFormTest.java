@@ -11,11 +11,11 @@ public class SeleniumEasy_InputFormTest extends Baseclass {
 	@Test
 	void RegisterNewCustomer()
 	{
-		seleniumUtilities util=new seleniumUtilities(driver);
-		util.LaunchBrowser("https://www.seleniumeasy.com/test/input-form-demo.html");
+	
+		seleniumUtilities.LaunchBrowser("https://www.seleniumeasy.com/test/input-form-demo.html",driver);
 		SeleniumEasy ob=new SeleniumEasy(driver,test);
 		ob.FillDataInForm();
-		util.closeBrowser();
+
 	}
 
 }

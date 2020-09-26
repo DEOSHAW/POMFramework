@@ -11,11 +11,10 @@ public class ExploreWorksoft extends Baseclass {
 	@Test
 	public void getWorksoftKnowledge()
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://www.worksoft.com/");
+		seleniumUtilities.LaunchBrowser("https://www.flipkart.com/",driver);
 		Worksoft certify=new Worksoft(driver,test);
 		certify.getAllProductsByWorksoft();
-		ob.closeBrowser();
+		
 		
 	}
 

@@ -6,7 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ListenersClass implements ITestListener {
+public class ListenersClass extends Baseclass implements ITestListener {
 
 	WebDriver driver;
 	public void onTestStart(ITestResult result) {

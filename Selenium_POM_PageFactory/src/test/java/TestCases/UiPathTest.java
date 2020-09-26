@@ -13,11 +13,11 @@ public class UiPathTest extends Baseclass {
 	public void TestForUIPath()
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://www.uipath.com/");
+
+		seleniumUtilities.LaunchBrowser("https://www.uipath.com/",driver);
 		UIPath path=new UIPath(driver,test);
 		path.printMenuBarList();
-		ob.closeBrowser();
+
 		
 	}
 

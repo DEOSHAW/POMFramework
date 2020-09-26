@@ -11,11 +11,11 @@ public class PdfTest extends Baseclass {
 	@Test
 	public void testPdfFeature()
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://www.princexml.com/samples/");
+	
+		seleniumUtilities.LaunchBrowser("https://www.princexml.com/samples/",driver);
 		PDFDemo ob1=new PDFDemo(driver,test);
 		ob1.ReadPDF();
-		ob.closeBrowser();
+	
 	}
 
 }

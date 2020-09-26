@@ -12,11 +12,10 @@ public class BarCodeAutomation extends Baseclass {
 	public void getBarCodeDetails() throws Exception
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://testautomationpractice.blogspot.com/");
+		seleniumUtilities.LaunchBrowser("https://www.flipkart.com/",driver);
 		BarCodeGenerator generator=new BarCodeGenerator(driver,test);
 		generator.createAndValidateBarCode();
-		ob.closeBrowser();
+		
 		
 	}
 

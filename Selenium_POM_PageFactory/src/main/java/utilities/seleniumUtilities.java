@@ -12,12 +12,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class seleniumUtilities {
 	
 	static JavascriptExecutor js=null;
-	static WebDriver driver=null;
+	static WebDriver Seldriver=null;
 	
-	public seleniumUtilities(WebDriver driver)
-	{
-		this.driver=driver;
-	}
+	
 	
 	
 	public static void jsClick(WebDriver driver,WebElement element)
@@ -37,7 +34,7 @@ public class seleniumUtilities {
 		
 	}
 	
-	public void LaunchBrowser(String Url)
+	public static void LaunchBrowser(String Url,WebDriver driver)
 	{
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -45,13 +42,14 @@ public class seleniumUtilities {
 		//options.setExperimentalOption("useAutomationExtension", false);
 		//options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
 		//driver=new ChromeDriver(options);
-		driver.manage().window().maximize();
-		driver.navigate().to(Url);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Seldriver=driver;
+		Seldriver.manage().window().maximize();
+		Seldriver.navigate().to(Url);
+		Seldriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
-	public void closeBrowser()
+	public static void closeBrowser()
 	{
-		driver.quit();
+		Seldriver.quit();
 	}
 
 

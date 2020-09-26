@@ -15,11 +15,11 @@ public class ImageTest extends Baseclass {
 	public void OpenImageURL() throws IOException, InterruptedException
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("http://www.mythoughts.co.in/2013/10/extract-and-verify-text-from-image.html");
+	
+		seleniumUtilities.LaunchBrowser("http://www.mythoughts.co.in/2013/10/extract-and-verify-text-from-image.html",driver);
 		MyThoughts object=new MyThoughts(driver,test);
 		object.LaunchImageURL();
-		ob.closeBrowser();
+		seleniumUtilities.closeBrowser();
 		
 	}
 

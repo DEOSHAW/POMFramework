@@ -13,12 +13,12 @@ public class sliderTest extends Baseclass {
 	public void testSlider() throws InterruptedException
 	{
 		
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://jqueryui.com/resources/demos/slider/default.html");
+
+		seleniumUtilities.LaunchBrowser("https://jqueryui.com/resources/demos/slider/default.html",driver);
 		SliderPage slider=new SliderPage(driver,test);
 		slider.handleSlider();
         Thread.sleep(5000);
-		ob.closeBrowser();
+
 	}
 	
 	

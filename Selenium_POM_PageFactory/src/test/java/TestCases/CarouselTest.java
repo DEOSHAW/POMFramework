@@ -12,11 +12,11 @@ public class CarouselTest extends Baseclass {
 	@Test
 	public void testCarousel() throws InterruptedException
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://www.flipkart.com/");
+		
+		seleniumUtilities.LaunchBrowser("https://www.flipkart.com/",driver);
 		Flipkart flip=new Flipkart(driver,test);
 		flip.ValidateAppliances();
-		ob.closeBrowser();
+		
 		
 	}
 

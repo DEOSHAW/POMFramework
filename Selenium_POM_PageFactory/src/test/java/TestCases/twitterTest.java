@@ -12,11 +12,11 @@ public class twitterTest extends Baseclass {
 	@Test(dataProvider="DataSupplierWithPoi")
 	public void signuUp(String name,String phone) throws InterruptedException
 	{
-		seleniumUtilities ob=new seleniumUtilities(driver);
-		ob.LaunchBrowser("https://twitter.com/");
+		
+		seleniumUtilities.LaunchBrowser("https://twitter.com/",driver);
 		Twitter tweet=new Twitter(driver,test);
 		tweet.signUpOnTwitter(name,phone);
-		ob.closeBrowser();
+
 		
 	}
 

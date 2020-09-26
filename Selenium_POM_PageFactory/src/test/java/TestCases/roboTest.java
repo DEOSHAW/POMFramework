@@ -13,11 +13,11 @@ public class roboTest extends Baseclass {
 	public void robotest()
 	{
 		
-		seleniumUtilities util=new seleniumUtilities(driver);
-		util.LaunchBrowser("https://robotframework.org/");
+
+		seleniumUtilities.LaunchBrowser("https://robotframework.org/",driver);
 		RobotFramework robot=new RobotFramework(driver, test);
 		robot.getDetails();
-		util.closeBrowser();
+
 		
 		
 	}
