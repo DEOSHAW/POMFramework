@@ -6,6 +6,7 @@ import Base.Baseclass;
 import Pages.AOT;
 
 public class AOTVision extends Baseclass {
+	//This test is for AOT
 	
 	@Test
 	public void getVision()
