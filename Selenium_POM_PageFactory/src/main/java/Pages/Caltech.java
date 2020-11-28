@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Caltech {
 	
@@ -35,6 +36,7 @@ public class Caltech {
     
     public void FindGradPrograms()
     {
+    	
     	JavascriptExecutor js=(JavascriptExecutor)Caltech_driver;
     	js.executeScript("arguments[0].click();", Main_Menu);
     	WebDriverWait wait=new WebDriverWait(Caltech_driver,10);
@@ -46,5 +48,6 @@ public class Caltech {
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[contains(text(),'Degrees Offered')])[3]"))).click();
     	String details=programDetails.getText();
     	System.out.println(details);
+    
     }
 }
