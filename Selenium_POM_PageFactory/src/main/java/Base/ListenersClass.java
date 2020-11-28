@@ -21,9 +21,9 @@ public class ListenersClass extends Baseclass implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test Execution was UnSuccessful");
-		driver=new ChromeDriver();
-		driver.close();
-		System.out.println("Browser instance closed");
+		//driver=new ChromeDriver();
+		//driver.close();
+		//System.out.println("Browser instance closed");
 		
 	}
 

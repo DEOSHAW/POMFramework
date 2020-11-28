@@ -114,7 +114,7 @@
         <version>2.22.0</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>C:\Users\Bishal\git\POM_Framework\Selenium_POM_PageFactory\testng.xml</suiteXmlFile>
+            <suiteXmlFile>C:\Selenium Projects\POMFramework\Selenium_POM_PageFactory\testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

@@ -156,7 +156,7 @@ public class Baseclass {
 	{
 		
 		test = report.startTest(classTestName);
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
