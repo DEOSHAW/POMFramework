@@ -5,10 +5,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Collections;
-import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -38,6 +40,7 @@ public class Baseclass {
 	String classTestName;
 	public static ExtentTest test;
 	public static ExtentReports report;
+	public static TakesScreenshot ts;
 	
 	@BeforeSuite
 	public void getHtmlExtentReport()
@@ -212,6 +215,14 @@ public class Baseclass {
 		else
 		{
 			System.out.println("Script Failed");
+			ts=(TakesScreenshot)driver;
+			File srcFile=ts.getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+result.getName()+".png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
 		}
 		driver.close();
 		report.endTest(test);
