@@ -13,22 +13,26 @@ import org.testng.annotations.Test;
 
 import Base.Baseclass;
 import Pages.LoginAmazon;
+import utilities.seleniumUtilities;
 
 public class LoginTestCase extends Baseclass  {
 	
 	
 	
 	
-	@Test(dataProvider="DataSupplierWithPoi")
-	public void Login(String Username,String Password) throws InterruptedException, AWTException
+	//@Test(dataProvider="DataSupplierWithPoi")
+	@Test
+	//public void Login(String Username,String Password) throws InterruptedException, AWTException
+	public void Login() throws InterruptedException, AWTException
 	{
 		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get("https://www.amazon.com");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);*/
+		seleniumUtilities.LaunchBrowser("https://www.amazon.com", driver);
 		LoginAmazon ob=new LoginAmazon(driver);
-		ob.LoginMethod(Username, Password);
+		ob.LoginMethod(seleniumUtilities.getDataForKey("USER_NAME"),seleniumUtilities.getDataForKey("PASSWORD"));
 		//Actions action=new Actions(driver);
 		//action.sendKeys(Keys.chord(Keys.ALT+"a"));
 		

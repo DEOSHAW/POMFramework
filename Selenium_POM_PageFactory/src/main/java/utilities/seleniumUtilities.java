@@ -1,13 +1,14 @@
 package utilities;
 
-import java.util.Collections;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class seleniumUtilities {
 	
@@ -15,7 +16,33 @@ public class seleniumUtilities {
 	static WebDriver Seldriver=null;
 	
 	
-	
+	public static String getDataForKey(String key)
+	{
+		
+try {
+			FileReader reader=new FileReader(new File(System.getProperty("user.dir")+File.separator+"src/test/resources/testdata.properties"));
+			Properties prop=new Properties();
+			prop.load(reader);
+			String value=prop.getProperty(key).trim();
+			if(value.length()>0)
+			{
+				return value;
+			}
+			else
+			{
+				return "NoData";
+			}
+			
+	} 
+  catch (Exception e) 
+     {
+			e.printStackTrace();
+			return "NoData";
+			
+		}
+		
+		
+	}
 	
 	public static void jsClick(WebDriver driver,WebElement element)
 	{
@@ -46,6 +73,7 @@ public class seleniumUtilities {
 		Seldriver.manage().window().maximize();
 		Seldriver.navigate().to(Url);
 		Seldriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 	}
 	public static void closeBrowser()
 	{
