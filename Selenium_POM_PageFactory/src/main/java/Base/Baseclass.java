@@ -38,9 +38,9 @@ public class Baseclass {
 	public WebDriver driver=null;
 	String testName;
 	String classTestName;
-	public static ExtentTest test;
+	public ExtentTest test;
 	public static ExtentReports report;
-	public static TakesScreenshot ts;
+	public TakesScreenshot ts;
 	
 	@BeforeSuite
 	public void getHtmlExtentReport()
