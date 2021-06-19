@@ -3,9 +3,10 @@
 <listeners>
 <listener class-name="Base.ListenersClass"/>
 </listeners>
- <test name="Selenium">
+ <test name="Selenium" parallel="classes">
  <classes>
- <class name="TestCases.UiPathTest" />
+ <class name="TestCases.BarCodeAutomation" />
+ <class name="TestCases.PWCTest" />
  </classes>
  </test>
 </suite>

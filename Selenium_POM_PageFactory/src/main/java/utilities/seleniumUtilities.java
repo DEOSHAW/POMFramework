@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 public class seleniumUtilities {
 	
 	static JavascriptExecutor js=null;
-	static WebDriver Seldriver=null;
+	WebDriver Seldriver=null;
 	
 	
 	public static String getDataForKey(String key)
@@ -63,21 +63,22 @@ try {
 	
 	public static void LaunchBrowser(String Url,WebDriver driver)
 	{
+		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.silentOutput", "true");
 		//ChromeOptions options = new ChromeOptions();
 		//options.setExperimentalOption("useAutomationExtension", false);
 		//options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
 		//driver=new ChromeDriver(options);
-		Seldriver=driver;
-		Seldriver.manage().window().maximize();
-		Seldriver.navigate().to(Url);
-		Seldriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver=driver;
+		driver.manage().window().maximize();
+	    driver.navigate().to(Url);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 	}
 	public static void closeBrowser()
 	{
-		Seldriver.quit();
+		//Seldriver.quit();
 	}
 
 
