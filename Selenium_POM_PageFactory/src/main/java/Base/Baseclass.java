@@ -5,8 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Collections;
-
-import org.apache.commons.io.FileUtils;
+import java.util.logging.FileHandler;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
@@ -23,6 +22,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -218,7 +218,8 @@ public class Baseclass {
 			ts=(TakesScreenshot)driver;
 			File srcFile=ts.getScreenshotAs(OutputType.FILE);
 			try {
-				FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+result.getName()+".png"));
+				
+			     org.openqa.selenium.io.FileHandler.copy(srcFile, new File(System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+result.getName()+".png"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
