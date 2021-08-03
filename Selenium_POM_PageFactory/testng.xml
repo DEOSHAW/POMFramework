@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.HackerRankTest" />
+ <class name="TestCases.SAPLabTest" />
  </classes>
  </test>
 </suite>
