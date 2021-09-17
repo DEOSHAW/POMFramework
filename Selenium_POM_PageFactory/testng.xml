@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.WikiPageTest" />
+ <class name="TestCases.SikuliTest" />
  </classes>
  </test>
 </suite>
