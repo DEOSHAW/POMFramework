@@ -1,7 +1,6 @@
 package utilities;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -9,11 +8,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class seleniumUtilities {
 	
 	static JavascriptExecutor js=null;
 	WebDriver Seldriver=null;
+	static WebDriverWait wait;
 	
 	
 	public static String getDataForKey(String key)
@@ -49,6 +52,13 @@ try {
 		js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", element);
 		
+		
+	}
+	
+	public static void waitForElement(WebDriver driver,WebElement element)
+	{
+		wait=new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}
 	

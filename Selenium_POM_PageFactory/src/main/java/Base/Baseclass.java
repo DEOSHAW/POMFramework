@@ -38,6 +38,7 @@ public class Baseclass {
 	public WebDriver driver=null;
 	String testName;
 	String classTestName;
+	String testMethodName;
 	public ExtentTest test;
 	public static ExtentReports report;
 	public TakesScreenshot ts;
@@ -58,6 +59,7 @@ public class Baseclass {
 		//System.out.println("Test name is: "+testName);
 
 		 classTestName = this.getClass().getSimpleName();
+		testMethodName= this.getClass().getDeclaredMethods()[0].getName();
          System.out.println("Class Name is: "+classTestName);
          //report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
          
@@ -155,10 +157,11 @@ public class Baseclass {
 	
 	
 	@BeforeMethod
-	 public void LaunchBrowser(Method m) throws InterruptedException
+	 public void LaunchBrowser(Method m,ITestResult result) throws InterruptedException
 	{
 		
-		test = report.startTest(classTestName);
+		test = report.startTest(testMethodName);
+		//test = report.startTest(result.getMethod().getMethodName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		ChromeOptions options = new ChromeOptions();
