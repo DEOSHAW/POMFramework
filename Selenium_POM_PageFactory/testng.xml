@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.GlobalSQATest" />
+ <class name="TestCases.TajmahalTest" />
  </classes>
  </test>
 </suite>
