@@ -36,7 +36,7 @@ public class Tajmahal {
 	{
 		
 		StringBuilder builder=new StringBuilder();
-		test.log(LogStatus.PASS, "Welcome to Agra");
+		test.log(LogStatus.PASS, "Welcome to Agra City");
 		js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", Monuments);
 		js.executeScript("arguments[0].setAttribute('style', 'border:2px solid blue; background:Red')",  Monuments);
