@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,6 +17,7 @@ public class seleniumUtilities {
 	static JavascriptExecutor js=null;
 	WebDriver Seldriver=null;
 	static WebDriverWait wait;
+	static Actions actions;
 	
 	
 	public static String getDataForKey(String key)
@@ -71,6 +72,13 @@ try {
 		
 	}
 	
+	public static void hoverOnElement(WebDriver driver,WebElement element)
+	{
+		actions=new Actions(driver);
+		actions.moveToElement(element).build().perform();
+		
+	}
+	
 	public static void LaunchBrowser(String Url,WebDriver driver)
 	{
 		
@@ -85,6 +93,12 @@ try {
 	    driver.navigate().to(Url);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
+	}
+	
+	public static void showAlert(WebDriver driver,String Message)
+	{
+		js=(JavascriptExecutor)driver;
+		js.executeScript("alert(arguments[0])", Message);
 	}
 	public static void closeBrowser()
 	{
