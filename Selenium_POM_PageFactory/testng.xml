@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.DockerTest" />
+ <class name="TestCases.OberoiHotelsTest" />
  </classes>
  </test>
 </suite>
