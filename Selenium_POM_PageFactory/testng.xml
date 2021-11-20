@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.OberoiHotelsTest" />
+ <class name="TestCases.GraphQLTest" />
  </classes>
  </test>
 </suite>

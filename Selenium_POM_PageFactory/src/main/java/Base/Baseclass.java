@@ -160,6 +160,7 @@ public class Baseclass {
 	 public void LaunchBrowser(Method m,ITestResult result) throws InterruptedException
 	{
 		
+
 		test = report.startTest(testMethodName);
 		//test = report.startTest(result.getMethod().getMethodName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
@@ -198,6 +199,7 @@ public class Baseclass {
 		//driver.navigate().to("http://demo.automationtesting.in/WebTable.html");
 		//driver.navigate().to("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
 		Thread.sleep(2000);
 		System.out.println("This is before method");
 		testName=m.getName();
