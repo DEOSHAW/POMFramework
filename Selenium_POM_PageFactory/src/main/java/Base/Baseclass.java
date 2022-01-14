@@ -43,6 +43,7 @@ public class Baseclass {
 	public ExtentTest test;
 	public static ExtentReports report;
 	public TakesScreenshot ts;
+	public static int count=0;
 	
 	@BeforeSuite
 	public void getHtmlExtentReport()
@@ -60,7 +61,7 @@ public class Baseclass {
 		//System.out.println("Test name is: "+testName);
 
 		 classTestName = this.getClass().getSimpleName();
-		testMethodName= this.getClass().getDeclaredMethods()[0].getName();
+		
          System.out.println("Class Name is: "+classTestName);
          //report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
          
@@ -160,8 +161,9 @@ public class Baseclass {
 	@BeforeMethod
 	 public void LaunchBrowser(Method m,ITestResult result) throws InterruptedException
 	{
-		
-
+		//String Count=String.valueOf(count);
+		testMethodName= this.getClass().getDeclaredMethods()[count].getName();
+		count++;
 		test = report.startTest(testMethodName);
 		//test = report.startTest(result.getMethod().getMethodName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
