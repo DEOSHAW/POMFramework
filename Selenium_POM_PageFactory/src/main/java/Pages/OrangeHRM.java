@@ -64,6 +64,7 @@ public class OrangeHRM {
 		seleniumUtilities.highlightElement(driver, country);
 		Select countryDropDown=new Select(country);
 		countryDropDown.selectByVisibleText("India");
+		test.log(LogStatus.PASS, "Entered all details");
 		Thread.sleep(800);
 		seleniumUtilities.highlightElement(driver, captchaIframe);
 		Thread.sleep(500);
@@ -71,6 +72,7 @@ public class OrangeHRM {
 		driver.switchTo().frame(captchaIframe);
 		Captcha.click();
 		Thread.sleep(3000);
+		test.log(LogStatus.PASS, "Test ended");
 	}
 
 }
