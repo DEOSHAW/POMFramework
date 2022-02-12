@@ -101,6 +101,13 @@ try {
 		js=(JavascriptExecutor)driver;
 		js.executeScript("alert(arguments[0])", Message);
 	}
+	
+	public static void highlightElement(WebDriver driver,WebElement element)
+	{
+		js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].setAttribute('style', 'border:2px solid blue; background:Green')", element);
+		
+	}
 	public static void closeBrowser()
 	{
 		//Seldriver.quit();
