@@ -91,7 +91,7 @@ try {
 		//driver=new ChromeDriver(options);
 		driver=driver;
 		driver.manage().window().maximize();
-	    driver.navigate().to(Url);
+	    driver.get(Url);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 	}

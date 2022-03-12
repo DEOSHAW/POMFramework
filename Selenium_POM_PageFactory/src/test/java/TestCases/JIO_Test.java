@@ -19,7 +19,6 @@ public class JIO_Test extends Baseclass {
 	{
 		
 		seleniumUtilities.LaunchBrowser("https://www.jio.com/", driver);
-		Thread.sleep(4000);
 		JIO ob=JIO.class.getDeclaredConstructor(WebDriver.class,ExtentTest.class).newInstance(driver,test);
 		Method m=JIO.class.getDeclaredMethod("getJIO_PlanDetails");
 		m.setAccessible(true);
