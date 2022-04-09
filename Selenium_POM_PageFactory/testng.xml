@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.NTUTest" />
+ <class name="TestCases.DemoQATest_PracticeForm" />
  </classes>
  </test>
 </suite>
