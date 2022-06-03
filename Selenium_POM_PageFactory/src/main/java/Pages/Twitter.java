@@ -28,30 +28,28 @@ public class Twitter {
 		js=(JavascriptExecutor)twitterDriver;
 		wait=new WebDriverWait(twitterDriver,10);
 	}
-	@FindBy(xpath="//*[text()='Create your account']")
-	WebElement createYourAccount;
-	@FindBy(xpath="//*[text()='Sign up']")
+	//@FindBy(xpath="//*[text()='Sign up with phone or email']")
+	//WebElement createYourAccount;
+	@FindBy(xpath="//*[text()='Sign up with phone or email']")
 	WebElement signUpLink;
 	@FindBy(xpath="//*[@name='name']")
 	WebElement nameTextBox;
 	@FindBy(xpath="//*[@name='phone_number']")
 	WebElement phoneNumberTextBox;
-	@FindBy(xpath="//select[@aria-label='Month']")
+	@FindBy(xpath="(//select[contains(@id,'SELECTOR_')])[1]")
 	WebElement monthDropDown;
-	@FindBy(xpath="//select[@aria-label='Day']")
+	@FindBy(xpath="(//select[contains(@id,'SELECTOR_')])[2]")
 	WebElement dayDropDown;
-	@FindBy(xpath="//select[@aria-label='Year']")
+	@FindBy(xpath="(//select[contains(@id,'SELECTOR_')])[3]")
 	WebElement yearDropDown;
 	@FindBy(xpath="//*[text()='Next']")
 	WebElement nextLink;
 	
 	public void signUpOnTwitter(String name,String Phone) throws InterruptedException
 	{
+		wait.until(ExpectedConditions.visibilityOf(signUpLink));
 		signUpLink.click();
 		test.log(LogStatus.PASS, "Clicked on SignUp Link");
-		wait.until(ExpectedConditions.visibilityOf(createYourAccount));
-		String text=(String) js.executeScript("return arguments[0].innerHTML;", createYourAccount);
-		Assert.assertEquals(text, "Create your account");
 		js.executeScript("arguments[0].value=arguments[1];", nameTextBox,name);
 		js.executeScript("arguments[0].value=arguments[1];", phoneNumberTextBox,Phone);
 		Select Month=new Select(monthDropDown);
@@ -61,7 +59,7 @@ public class Twitter {
 		Day.selectByIndex(3);
 		Year.selectByValue("1991");
 		test.log(LogStatus.PASS, "Entered all details");
-		nextLink.click();
+		//nextLink.click();
 		test.log(LogStatus.PASS, "Clicked On Next Button");
 		Thread.sleep(4000);
 		

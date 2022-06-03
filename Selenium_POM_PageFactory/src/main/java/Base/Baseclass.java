@@ -43,7 +43,6 @@ public class Baseclass {
 	public ExtentTest test;
 	public static ExtentReports report;
 	public TakesScreenshot ts;
-	public static int count=0;
 	
 	@BeforeSuite
 	public void getHtmlExtentReport()
@@ -86,7 +85,7 @@ public class Baseclass {
         System.out.println(testName);
 
         //HashMap<String[],Object[][]> datamap=new HashMap<String[],Object[][]>();
-        FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\"+classTestName+".xlsx");
+        FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+File.separator+classTestName+".xlsx");
         //FileInputStream fis=new FileInputStream("C:\\Users\\856520\\IdeaProjects\\Selenium1\\src\\main\\Resources\\TestData\\SearchItemAndPlaceOrder.xls");
         Workbook wb=Workbook.getWorkbook(fis);
         Sheet sh=wb.getSheet(0);
@@ -126,7 +125,7 @@ public class Baseclass {
        
 
         //HashMap<String[],Object[][]> datamap=new HashMap<String[],Object[][]>();
-        FileInputStream fis=new FileInputStream("C:\\Users\\Bishal\\GitBashMavenProject\\"+classTestName+".xlsx");
+		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+File.separator+classTestName+".xlsx");
         XSSFWorkbook wb=new XSSFWorkbook(fis);
         XSSFSheet sh=wb.getSheetAt(0);
         row=sh.getLastRowNum();
@@ -162,8 +161,7 @@ public class Baseclass {
 	 public void LaunchBrowser(Method m,ITestResult result) throws InterruptedException
 	{
 		//String Count=String.valueOf(count);
-		testMethodName= this.getClass().getDeclaredMethods()[count].getName();
-		count++;
+	    testMethodName= this.getClass().getSimpleName();
 		test = report.startTest(testMethodName);
 		//test = report.startTest(result.getMethod().getMethodName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");

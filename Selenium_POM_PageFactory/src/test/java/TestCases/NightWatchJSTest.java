@@ -25,5 +25,15 @@ public class NightWatchJSTest extends Baseclass {
 		m.invoke(ob);
 		
 	}
+	@Test
+	void getNightWatchJSMediaInfo1() throws Exception
+	{
+		seleniumUtilities.LaunchBrowser("https://nightwatchjs.org/", driver);
+		NightWatchJS ob=NightWatchJS.class.getDeclaredConstructor(WebDriver.class,ExtentTest.class).newInstance(driver,test);
+		Method m=NightWatchJS.class.getDeclaredMethod("getMediaInfo");
+		m.setAccessible(true);
+		m.invoke(ob);
+		
+	}
 
 }
