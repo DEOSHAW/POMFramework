@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.DemoQATest_PracticeForm" />
+ <class name="TestCases.MLF_Test" />
  </classes>
  </test>
 </suite>
