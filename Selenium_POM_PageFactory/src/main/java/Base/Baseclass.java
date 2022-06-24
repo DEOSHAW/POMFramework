@@ -231,7 +231,7 @@ public class Baseclass {
 			}
 			
 		}
-		driver.close();
+		driver.quit();
 		report.endTest(test);
 		System.out.println("Test Ended");
 		
