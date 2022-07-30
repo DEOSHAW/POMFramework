@@ -115,6 +115,7 @@ public class Baseclass {
 	}
 	//This method uses Apache POI
 	@DataProvider(name="DataSupplierWithPoi")
+	//@DataProvider(name="DataSupplierWithPoi",indices = {0,4})
 	public Object[][] GetDataForLogin() throws BiffException, IOException
 	{
 		
