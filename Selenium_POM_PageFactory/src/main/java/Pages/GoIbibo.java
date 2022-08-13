@@ -61,6 +61,7 @@ public class GoIbibo {
 		comboTextBoxdest.click();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		test.log(LogStatus.PASS, "Typed source and destination");
 		
 		
 	}
