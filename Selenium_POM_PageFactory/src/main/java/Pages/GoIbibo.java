@@ -48,14 +48,10 @@ public class GoIbibo {
 	{
 		Robot robot=new Robot();
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		
 		test.log(LogStatus.PASS, "Test started");
 		fromElement.click();
 		js.executeScript("arguments[0].value=arguments[1]", comboTextBoxsrc,src);
 		comboTextBoxsrc.click();
-		//comboTextBoxsrc.sendKeys(src);
-		//robot.keyPress(KeyEvent.VK_ENTER);
-		//robot.keyRelease(KeyEvent.VK_ENTER);
 		js.executeScript("arguments[0].click();", toElement);
 		js.executeScript("arguments[0].value=arguments[1]", comboTextBoxdest,dest);
 		comboTextBoxdest.click();
