@@ -1,3 +1,6 @@
 /target/
 /test-output/
 *.html
+/bin
+*.classpath
+*.project
