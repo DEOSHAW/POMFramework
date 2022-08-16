@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentTest;
 
 import Base.Baseclass;
-import Pages.AADHAR;
 import Pages.ScienceCity;
 import utilities.seleniumUtilities;
 
