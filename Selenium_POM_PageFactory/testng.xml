@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.MLF_Test" />
+ <class name="TestCases.WGRTest" />
  </classes>
  </test>
 </suite>
