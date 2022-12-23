@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.UITP_MouseHover_Test" />
+ <class name="TestCases.RSPracticePageTableTest" />
  </classes>
  </test>
 </suite>
