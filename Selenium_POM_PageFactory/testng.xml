@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.RSPracticePageTableTest" />
+ <class name="TestCases.USOpenGolfTest" />
  </classes>
  </test>
 </suite>
