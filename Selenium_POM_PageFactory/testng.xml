@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.USOpenGolfTest" />
+ <class name="TestCases.IIMATest" />
  </classes>
  </test>
 </suite>
