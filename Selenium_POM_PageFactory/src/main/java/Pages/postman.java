@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,7 +44,7 @@ public class postman {
 	public void getAutomationDetails()
 	{
 		product.click();
-		wait=new WebDriverWait(driver_postman,10);
+		wait=new WebDriverWait(driver_postman,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)driver_postman;
 		wait.until(ExpectedConditions.visibilityOf(automatedTesting)).click();
 		Assert.assertEquals(automatedTestingText.getText(), "Automated Testing with Postman");

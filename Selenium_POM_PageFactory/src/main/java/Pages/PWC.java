@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class PWC {
 	public void ExploreCareerBenefitsAtPWC() throws InterruptedException
 	{
 		StringBuilder careerPerks=new StringBuilder();
-		wait=new WebDriverWait(driver, 8);
+		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		js=(JavascriptExecutor)driver;
 		test.log(LogStatus.PASS, "Test started");
 		test.log(LogStatus.PASS, "Clicked on hamburger link");

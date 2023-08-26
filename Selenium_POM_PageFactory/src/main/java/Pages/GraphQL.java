@@ -2,6 +2,7 @@ package Pages;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -61,7 +62,7 @@ public class GraphQL {
 		//actions.sendKeys(searchBox, Keys.ENTER).perform();
 		test.log(LogStatus.PASS, "Information searched");
 		Thread.sleep(1000);
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(resultTitle));
 		js=(JavascriptExecutor)driver;
 		js.executeScript("alert(arguments[0])", graphQLInfo.getText());

@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,7 +35,7 @@ public class ViaBenefits {
 	void getBenefitsForRetirees() throws InterruptedException
 	{
 		test.log(LogStatus.PASS, "Test Started");
-		WebDriverWait wait=new WebDriverWait(driver,10);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(benefitsLabel));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", benefitsLabel);

@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class Optum {
 	
 	void getInsightsPublishedByOptum() throws Exception
 	{
-		WebDriverWait wait=new WebDriverWait(driver,10);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		test.log(LogStatus.PASS, "Test started");
 		searchTextBox.click();

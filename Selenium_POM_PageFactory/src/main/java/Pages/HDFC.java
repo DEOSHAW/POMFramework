@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,7 +42,7 @@ public class HDFC {
 		System.out.println("First Window is"+Window1);
 		SlideButton.click();
 		Thread.sleep(2000);
-		WebDriverWait wait=new WebDriverWait(HDFC_driver,40);
+		WebDriverWait wait=new WebDriverWait(HDFC_driver,Duration.ofSeconds(40));
 		WebElement Know_More=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[text()='KNOW MORE'])[3]")));
 		Know_More.click();
 		Thread.sleep(5000);

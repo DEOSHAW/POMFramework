@@ -1,11 +1,10 @@
 package Pages;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -51,7 +50,7 @@ public class WikiPage {
 		test.log(LogStatus.PASS, "Test started");
 		js=(JavascriptExecutor)driver;
 		actions=new Actions(driver);
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		js.executeScript("arguments[0].value=arguments[1]",searchBox,"Oracle Corporation");
 		searchBox.click();
 		Thread.sleep(500);

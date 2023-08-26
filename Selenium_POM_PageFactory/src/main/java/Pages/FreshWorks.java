@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -43,7 +44,7 @@ public class FreshWorks {
 		StringBuilder builder=new StringBuilder();
 		actions=new Actions(driver);
 		js=(JavascriptExecutor)driver;
-		wait=new WebDriverWait(driver,8);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		actions.moveToElement(Products).perform();
 		test.log(LogStatus.PASS, "Hovered over Products");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='For your customers']")));

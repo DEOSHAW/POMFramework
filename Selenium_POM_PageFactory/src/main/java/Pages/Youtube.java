@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class Youtube {
 	public void getVideoTitles() throws Exception
 	{
 		test.log(LogStatus.PASS, "Test Started");
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(logoIcon));
 		test.log(LogStatus.PASS, "Youtube launched");
 		Iterator<WebElement> itr=videoTitles.iterator();

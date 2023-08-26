@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -8,7 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ByIdOrName;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +33,7 @@ public class SeleniumEasy {
 		EasyDriver=driver;
 		this.test=test;
 		PageFactory.initElements(EasyDriver, this);
-		wait=new WebDriverWait(EasyDriver,10);
+		wait=new WebDriverWait(EasyDriver,Duration.ofSeconds(10));
 		
 	}
 	
@@ -109,7 +109,7 @@ public class SeleniumEasy {
 	{
 		try
 		{
-		WebDriverWait wait=new WebDriverWait(EasyDriver,10);
+		WebDriverWait wait=new WebDriverWait(EasyDriver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(firstName));
 		js=(JavascriptExecutor)EasyDriver;
 		js.executeScript("arguments[0].value=arguments[1];",firstName,"Deo");

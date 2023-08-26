@@ -1,7 +1,6 @@
 package Pages;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -53,7 +52,7 @@ public class OracleApex {
 	void executeQueryInOracleApex() throws Exception
 	{
 		test.log(LogStatus.PASS, "Test started");
-		WebDriverWait wait=new WebDriverWait(driver, 15);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(15));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		wait.until(ExpectedConditions.visibilityOf(initialSignInLink));
 		initialSignInLink.click();

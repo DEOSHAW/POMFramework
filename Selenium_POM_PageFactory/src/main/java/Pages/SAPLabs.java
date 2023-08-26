@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +38,7 @@ public class SAPLabs {
 	{
 		test.log(LogStatus.PASS, "Test started");
 		StringBuilder Locations=new StringBuilder();
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", asiaPacificLabel);
 		wait.until(ExpectedConditions.visibilityOf(asiaPacificLabel));

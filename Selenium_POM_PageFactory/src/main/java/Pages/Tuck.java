@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +39,7 @@ public class Tuck {
 		test.log(LogStatus.PASS, "Test Started");
 		Actions actions=new Actions(driver);
 		actions.moveToElement(mbaLink).click(hiringCompaniesLink).perform();
-		WebDriverWait wait=new WebDriverWait(driver,8);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Top Hiring Companies']")));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,300)");

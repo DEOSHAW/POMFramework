@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,7 +46,7 @@ public class Flipkart {
 		{
 			arrowLink.click();
 		}
-		wait=new WebDriverWait(flipkartDriver,25);
+		wait=new WebDriverWait(flipkartDriver,Duration.ofSeconds(25));
 		wait.until(ExpectedConditions.visibilityOf(kitchenAppliances)).click();
 		test.log(LogStatus.PASS, "Clicked on Kitchen appliances Image");
 		Thread.sleep(5000);

@@ -39,7 +39,7 @@ public class BitBucket {
 		Actions actions=new Actions(driver);
 		actions.moveToElement(productGuideLink).pause(Duration.ofMillis(800)).click(bitBucketOverviewLink).perform();
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		WebDriverWait wait=new WebDriverWait(driver, 5);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(bitBucketOverview));
 		js.executeScript("alert(arguments[0])", bitBucketOverview.getText());
 		test.log(LogStatus.PASS, "Overview of Bitbucket displayed");

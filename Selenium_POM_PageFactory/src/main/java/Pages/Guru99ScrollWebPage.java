@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +32,7 @@ public class Guru99ScrollWebPage {
 		JavascriptExecutor js=(JavascriptExecutor)ScrollDriver;
 		js.executeScript("arguments[0].scrollIntoView();",VBScript);
 		VBScript.click();
-		WebDriverWait wait=new WebDriverWait(ScrollDriver,15);
+		WebDriverWait wait=new WebDriverWait(ScrollDriver,Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[starts-with(text(),'Home')]")));
 		System.out.println("Text is "+Home.getText());
 	}

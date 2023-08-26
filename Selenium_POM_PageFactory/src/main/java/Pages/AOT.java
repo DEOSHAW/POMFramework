@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -39,7 +41,7 @@ public class AOT {
 	   {
 		   test.log(LogStatus.FAIL, "Could not click on aboutAOTLink");  
 	   }
-	   WebDriverWait wait=new WebDriverWait(AOT_Driver,10);
+	   WebDriverWait wait=new WebDriverWait(AOT_Driver,Duration.ofSeconds(10));
 	   WebElement Vision=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[contains(text(),'Aspires to be a pre-eminent')])[1]")));
 	   System.out.println(Vision.getText());
 	   test.log(LogStatus.PASS, "Vision text found");

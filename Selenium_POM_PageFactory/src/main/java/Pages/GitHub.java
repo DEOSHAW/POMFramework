@@ -1,6 +1,7 @@
 package Pages;
 
 import java.io.File;
+import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,7 +29,7 @@ public class GitHub {
 		GitHub_Driver=driver;
 		this.test=test;
 		PageFactory.initElements(GitHub_Driver, this);
-		wait=new WebDriverWait(GitHub_Driver,20);
+		wait=new WebDriverWait(GitHub_Driver,Duration.ofSeconds(20));
 		js=(JavascriptExecutor)GitHub_Driver;
 		action=new Actions(GitHub_Driver);
 		

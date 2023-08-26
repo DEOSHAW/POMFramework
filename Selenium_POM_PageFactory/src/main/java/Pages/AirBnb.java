@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -49,7 +51,7 @@ public class AirBnb {
 		JavascriptExecutor js=(JavascriptExecutor)AirBnb_Driver;
 		js.executeScript("window.scrollBy(0,400)");
 		Thread.sleep(1000);
-		WebDriverWait wait=new WebDriverWait(AirBnb_Driver,10);
+		WebDriverWait wait=new WebDriverWait(AirBnb_Driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@aria-disabled='false'])[1]"))).click();
 		//Date.click();
 		Thread.sleep(2000);

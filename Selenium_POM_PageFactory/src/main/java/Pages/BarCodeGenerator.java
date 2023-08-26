@@ -3,6 +3,7 @@ package Pages;
 import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
@@ -51,7 +52,7 @@ public class BarCodeGenerator {
 	public void createAndValidateBarCode() throws Exception
 	{
 		//makeBarCode.click();
-		wait=new WebDriverWait(codeDriver,10);
+		wait=new WebDriverWait(codeDriver,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)codeDriver;
 		//if(wait.until(ExpectedConditions.visibilityOf(textInput)).isDisplayed())
 		//{

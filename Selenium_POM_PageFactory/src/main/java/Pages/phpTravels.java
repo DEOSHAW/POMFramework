@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -49,7 +50,7 @@ public class phpTravels {
 	public void selectCheckInDate(String month,String day) throws InterruptedException
 	{
 		
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(checkinDate)).click();
 		test.log(LogStatus.PASS, "Clicked on Checkin");
 		
@@ -80,7 +81,7 @@ public class phpTravels {
 	public void selectCheckOutDate(String month,String day) throws InterruptedException
 	{
 		
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(checkOutDate)).click();
 		test.log(LogStatus.PASS, "Clicked on Checkout");
 		

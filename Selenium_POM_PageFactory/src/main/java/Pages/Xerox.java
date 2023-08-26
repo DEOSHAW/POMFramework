@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class Xerox {
 		StringBuilder listOfServices=new StringBuilder();
 		js=(JavascriptExecutor)driver;
 		actions=new Actions(driver);
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		test.log(LogStatus.PASS, "Test started");
 		actions.moveToElement(solutionsAndServices).build().perform();
 		test.log(LogStatus.PASS, "Hovered over solution and services menu");

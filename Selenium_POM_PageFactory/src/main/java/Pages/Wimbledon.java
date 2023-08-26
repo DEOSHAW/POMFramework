@@ -2,6 +2,7 @@ package Pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -57,7 +58,7 @@ public class Wimbledon
 			System.out.println(itrName.next().getText());
 		}
 		test.log(LogStatus.PASS, "Featured players' names revealed");
-		WebDriverWait wait=new WebDriverWait(driver, 5);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfAllElements(featuredPlayersImages));
 		
 		Iterator<WebElement> itrPhoto=featuredPlayersImages.iterator();

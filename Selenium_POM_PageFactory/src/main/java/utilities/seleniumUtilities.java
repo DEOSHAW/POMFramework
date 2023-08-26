@@ -2,6 +2,7 @@ package utilities;
 
 import java.io.File;
 import java.io.FileReader;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -59,7 +60,7 @@ try {
 	
 	public static void waitForElement(WebDriver driver,WebElement element)
 	{
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}

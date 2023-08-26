@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +26,7 @@ public class Linkedin {
 	{
 		Linkedin_Driver=driver;
 		PageFactory.initElements(Linkedin_Driver, this);
-		wait=new WebDriverWait(Linkedin_Driver,10);
+		wait=new WebDriverWait(Linkedin_Driver,Duration.ofSeconds(10));
 		test1=test;
 		
 	}

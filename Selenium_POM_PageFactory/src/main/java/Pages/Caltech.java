@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -39,7 +40,7 @@ public class Caltech {
     	
     	JavascriptExecutor js=(JavascriptExecutor)Caltech_driver;
     	js.executeScript("arguments[0].click();", Main_Menu);
-    	WebDriverWait wait=new WebDriverWait(Caltech_driver,10);
+    	WebDriverWait wait=new WebDriverWait(Caltech_driver,Duration.ofSeconds(10));
     	wait.until(ExpectedConditions.elementToBeClickable(Academics_Option)).click();
     	js.executeScript("arguments[0].scrollIntoView(true);",graduatePrograms);
     	Caltech_driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

@@ -1,9 +1,9 @@
 package Pages;
 
 import java.awt.Image;
-import java.awt.image.RenderedImage;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
@@ -14,10 +14,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-
-
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -42,7 +38,7 @@ public class MyThoughts {
 	
 	public void LaunchImageURL() throws IOException, InterruptedException
 	{
-		new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOf(imageElement));
+		new WebDriverWait(driver,Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(imageElement));
 		String imageURL=imageElement.getAttribute("src");
 		System.out.println("Image URL is: "+imageURL);
 		URL url = new URL(imageURL);

@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +36,7 @@ public class FreeAPI {
 	{
 		test.log(LogStatus.PASS, "Test Started");
 		StringBuilder featureList=new StringBuilder();
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)driver;
 		wait.until(ExpectedConditions.visibilityOf(featureMenu));
 		actions=new Actions(driver);

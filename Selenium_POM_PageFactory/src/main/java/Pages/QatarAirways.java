@@ -1,12 +1,12 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -47,7 +47,7 @@ public class QatarAirways {
 		System.out.println("Please Enter the Date: ");
 		Scanner scan=new Scanner(System.in);
 		int date=scan.nextInt();
-		WebDriverWait wait=new WebDriverWait(Qatar_Driver,10);
+		WebDriverWait wait=new WebDriverWait(Qatar_Driver,Duration.ofSeconds(10));
 		Thread.sleep(2000);
 		WebElement Date=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='table-condensed'])[1]//tr//td[text()="+date+"]")));
 		Date.click();

@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -26,7 +27,7 @@ public class Twitter {
 		this.test=test;
 		PageFactory.initElements(twitterDriver, this);
 		js=(JavascriptExecutor)twitterDriver;
-		wait=new WebDriverWait(twitterDriver,10);
+		wait=new WebDriverWait(twitterDriver,Duration.ofSeconds(10));
 	}
 	//@FindBy(xpath="//*[text()='Sign up with phone or email']")
 	//WebElement createYourAccount;

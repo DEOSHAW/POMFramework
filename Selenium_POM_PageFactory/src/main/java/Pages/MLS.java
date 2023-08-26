@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -45,7 +46,7 @@ public class MLS
 		test.log(LogStatus.PASS, "Test Started");
 		standingsLink.click();
 		test.log(LogStatus.PASS, "Navigated to Standings page");
-		WebDriverWait wait=new WebDriverWait(driver,5);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(standingsLabel));
 		int rowNum=tableRows.size();
 		int colNum=tableRows.size();

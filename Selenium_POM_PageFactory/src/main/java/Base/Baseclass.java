@@ -165,7 +165,7 @@ public class Baseclass {
 	    testMethodName= this.getClass().getSimpleName();
 		test = report.startTest(testMethodName);
 		//test = report.startTest(result.getMethod().getMethodName());
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);

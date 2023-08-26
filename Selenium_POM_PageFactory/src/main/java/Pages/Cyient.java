@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,7 +48,7 @@ public class Cyient {
 			acceptAllCookies.get(0).click();
 		}
 		Thread.sleep(2500);
-		WebDriverWait wait=new WebDriverWait(driver,10);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		Actions actions=new Actions(driver);
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		//wait.until(ExpectedConditions.visibilityOf(aboutLink)).click();

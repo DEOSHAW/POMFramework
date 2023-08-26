@@ -1,6 +1,7 @@
 package Pages;
 
 import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,7 +40,7 @@ public class PBR {
 		test.log(LogStatus.PASS, "Test started");
 		Actions actions=new Actions(driver);
 		actions.moveToElement(resultsAndstandingsLink).click().pause(1500).click(standingsLink).build().perform();
-		WebDriverWait wait=new WebDriverWait(driver,10);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(standingsText));
 		//Get the standings of the players
 		int row=driver.findElements(By.xpath("//*[@id='table-rider-standings']//tr")).size()-1;

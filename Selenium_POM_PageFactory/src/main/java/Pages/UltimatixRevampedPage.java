@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -47,7 +49,7 @@ public class UltimatixRevampedPage {
 		js.executeScript("arguments[0].click();", Password);
 		TextPrompt.getText();
 		Assert.assertEquals(TextPrompt.getText(), "Still using password? Please wait for it to be enabled...","Password assertion did not  match");
-		WebDriverWait wait=new WebDriverWait(Ultimatix_driver,60);
+		WebDriverWait wait=new WebDriverWait(Ultimatix_driver,Duration.ofSeconds(60));
 		boolean bool=wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(text(),'Still using password?')]")));
 		if(bool)
 		{

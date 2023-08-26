@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -39,7 +40,7 @@ public class CreditSuisse {
 	@FindBy(xpath="//b[text()='India']")
 	WebElement India;
 	
-	@FindBy(xpath="//*[text()='Ex­plore our fea­tured loc­a­tions']/following::b")
+	@FindBy(xpath="//*[text()='Exï¿½plore our feaï¿½tured locï¿½aï¿½tions']/following::b")
 	List<WebElement> allLocations;
 	
 	@FindBy(xpath="//*[text()='Accept and continue']")
@@ -51,7 +52,7 @@ public class CreditSuisse {
 	{
 		test.log(LogStatus.PASS, "Test started");
 		actions=new Actions(driver);
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)driver;
 		if(acceptAndContinue.isDisplayed())
 		{

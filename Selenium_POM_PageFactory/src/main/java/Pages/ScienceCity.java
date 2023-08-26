@@ -2,9 +2,8 @@ package Pages;
 
 import java.awt.Image;
 import java.awt.image.RenderedImage;
-import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
@@ -16,7 +15,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import javax.imageio.ImageIO;
+
 import com.asprise.ocr.Ocr;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -50,7 +49,7 @@ public class ScienceCity {
 		test.log(LogStatus.PASS, "Clicked on plan visit menu");
 		ticketRates.click();
 		test.log(LogStatus.PASS, "Clicked on ticket rates link");
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(ticketRatesText));
 		js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,700)");

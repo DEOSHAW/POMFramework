@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,7 +40,7 @@ public class UITestingPlayGround_Ajax {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", ajaxButton);
 		test.log(LogStatus.PASS, "Clicked on ajax button");
-		WebDriverWait wait=new WebDriverWait(driver,60);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(ajaxResponseElement));
 		String ajaxResponseText=ajaxResponseElement.getText();
 		System.out.println(ajaxResponseText);

@@ -1,6 +1,7 @@
 package TestCases;
 
 import java.io.File;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,7 +26,7 @@ public class YoutubeAutomation {
 		
 		driver.get("https://www.youtube.com/");
 		driver.manage().window().maximize();
-		wait=new WebDriverWait(driver, 8);
+		wait=new WebDriverWait(driver, Duration.ofSeconds(8));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='search']"))).sendKeys("Selenium");
 		Thread.sleep(500);
 		actions=new Actions(driver);

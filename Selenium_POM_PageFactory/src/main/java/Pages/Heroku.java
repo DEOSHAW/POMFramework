@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,7 +38,7 @@ public class Heroku {
 	
 	public void uploadFile()
 	{
-		wait=new WebDriverWait(herokuDriver,10);
+		wait=new WebDriverWait(herokuDriver,Duration.ofSeconds(10));
 		test.log(LogStatus.PASS, "Started File Upload");
 		wait.until(ExpectedConditions.visibilityOf(BrowseButton));
 		BrowseButton.sendKeys("D:\\CheckIn.txt");

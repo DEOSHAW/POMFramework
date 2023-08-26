@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,7 +49,7 @@ public class VaishnoDevi {
 		String text=(String) js.executeScript("return arguments[0].innerHTML;", pageText);
 		System.out.println("Text is: "+text);
 		test.log(LogStatus.PASS, "Expected text found");
-		wait=new WebDriverWait(driver,10);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(planYatra));
 		actions=new Actions(driver);
 		actions.moveToElement(planYatra).moveToElement(howToReach).click(katraToBhawan).build().perform();

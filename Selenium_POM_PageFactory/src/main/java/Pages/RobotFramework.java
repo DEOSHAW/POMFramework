@@ -1,5 +1,7 @@
 package Pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +34,7 @@ public class RobotFramework {
 	
 	public void getDetails()
 	{
-		wait=new WebDriverWait(roboDriver,10);
+		wait=new WebDriverWait(roboDriver,Duration.ofSeconds(10));
 		js=(JavascriptExecutor)roboDriver;
 		js.executeScript("arguments[0].scrollIntoView(true);", modularElement);
 		try {

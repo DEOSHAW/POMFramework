@@ -1,10 +1,9 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,7 +11,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class MonsterIndia {
 	
@@ -38,7 +36,7 @@ public class MonsterIndia {
 		for(String s:windows)
 			System.out.println(s);
 		Thread.sleep(8000);
-		WebDriverWait wait=new WebDriverWait(Monster_driver,60);
+		WebDriverWait wait=new WebDriverWait(Monster_driver,Duration.ofSeconds(60));
 		//Arrow.click();
 		WebElement ImageLink=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@title,'LTI')]")));
 		if(ImageLink.isDisplayed())

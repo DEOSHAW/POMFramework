@@ -1,6 +1,7 @@
 package Pages;
 
-import org.bson.BsonJavaScript;
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +34,7 @@ public class JaneStreet {
 	
 	void getInformationOnWhatWeDo() throws Exception
 	{
-		WebDriverWait wait=new WebDriverWait(driver, 5);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		test.log(LogStatus.PASS, "Test Started");
 		//wait.until(ExpectedConditions.visibilityOf(whatWeDoLink));
