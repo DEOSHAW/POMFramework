@@ -3,6 +3,7 @@ package Pages;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
@@ -37,9 +38,13 @@ public class MLR {
 	@FindBy(css=".product-center-img")
 	List<WebElement> allTeams;
 	
+	@FindBy(css=".hustle-button-icon.hustle-button-close.has-background")
+	WebElement closeButton;
+	
 	void getCSSValuesOfTeams()
 	{
 		test.log(LogStatus.PASS, "Test Started");
+		closeButton.click();
 		teamsLink.click();
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(teamsLabel));
