@@ -39,12 +39,16 @@ public class MLR {
 	List<WebElement> allTeams;
 	
 	@FindBy(css=".hustle-button-icon.hustle-button-close.has-background")
-	WebElement closeButton;
+	List<WebElement> closeButton;
 	
 	void getCSSValuesOfTeams()
 	{
 		test.log(LogStatus.PASS, "Test Started");
-		closeButton.click();
+		if(closeButton.size()>0)
+		{
+			closeButton.get(0).click();
+		}
+		
 		teamsLink.click();
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(teamsLabel));
