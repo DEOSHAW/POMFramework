@@ -170,6 +170,7 @@ public class Baseclass {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
+		options.addArguments("--remote-allow-origins=*");
 		driver=new ChromeDriver(options);
 		//driver.manage().window().maximize();
 		//driver.get("https://www.amazon.com");
