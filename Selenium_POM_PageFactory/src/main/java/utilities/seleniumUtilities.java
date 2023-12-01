@@ -90,10 +90,10 @@ try {
 		//options.setExperimentalOption("useAutomationExtension", false);
 		//options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
 		//driver=new ChromeDriver(options);
-		driver=driver;
 		driver.manage().window().maximize();
 	    driver.get(Url);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
 		
 	}
 	
