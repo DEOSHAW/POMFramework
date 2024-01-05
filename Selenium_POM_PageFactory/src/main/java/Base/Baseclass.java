@@ -171,6 +171,7 @@ public class Baseclass {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
 		options.addArguments("--remote-allow-origins=*");
+		options.addArguments("log-level=2");
 		driver=new ChromeDriver(options);
 		//driver.manage().window().maximize();
 		//driver.get("https://www.amazon.com");
