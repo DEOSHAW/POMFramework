@@ -165,7 +165,8 @@ public class Baseclass {
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
-		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
+		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
+		options.addArguments("--log-level=3");
 		options.addArguments("--remote-allow-origins=*");
 		//options.addArguments("log-level=2");
 		driver=new ChromeDriver(options);

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -88,7 +89,7 @@ try {
 		//System.setProperty("webdriver.chrome.silentOutput", "true");
 		//ChromeOptions options = new ChromeOptions();
 		//options.setExperimentalOption("useAutomationExtension", false);
-		//options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation")); 
+		//options.addArguments("--log-level=3");
 		//driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 	    driver.get(Url);
