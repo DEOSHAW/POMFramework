@@ -26,7 +26,7 @@ public class Mahindra
 	@FindBy(xpath="//a[text()='our businesses']")
 	WebElement ourBusinessesLink;
 	
-	@FindBy(xpath="//a[text()='Overview']")
+	@FindBy(xpath="(//a[text()='Overview'])[3]")
 	WebElement overviewLink;
 	
 	@FindBy(xpath="//a[text()='OUR BUSINESSES']")
@@ -38,7 +38,8 @@ public class Mahindra
 	List<String> getBusinessVerticals() throws InterruptedException
 	{
 		Actions actions=new Actions(driver);
-		actions.moveToElement(ourBusinessesLink).pause(Duration.ofSeconds(1)).click(overviewLink).perform();
+		actions.moveToElement(ourBusinessesLink).click(overviewLink).perform();
+		Thread.sleep(1000);
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", ourBusinessesFooterLink);
 		Thread.sleep(2000);
