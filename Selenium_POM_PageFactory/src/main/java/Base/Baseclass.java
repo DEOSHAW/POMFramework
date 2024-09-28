@@ -162,12 +162,13 @@ public class Baseclass {
 		test = report.startTest(testMethodName);
 		//test = report.startTest(result.getMethod().getMethodName());
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
-		System.setProperty("webdriver.chrome.silentOutput", "true");
+		//System.setProperty("webdriver.chrome.silentOutput", "true");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
 		options.addArguments("--log-level=3");
 		options.addArguments("--remote-allow-origins=*");
+		//options.addArguments("--headless");
 		//options.addArguments("log-level=2");
 		driver=new ChromeDriver(options);
 		//driver.manage().window().maximize();
