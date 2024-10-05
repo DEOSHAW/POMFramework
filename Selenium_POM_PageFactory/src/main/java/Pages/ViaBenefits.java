@@ -1,51 +1,55 @@
 package Pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
-public class ViaBenefits {
+public class ViaBenefits
+{
 	WebDriver driver;
-	ExtentTest test;
 	
-	public ViaBenefits(WebDriver driver,ExtentTest test)
+	public ViaBenefits(WebDriver driver)
 	{
-		
 		this.driver=driver;
-		this.test=test;
 		PageFactory.initElements(driver, this);
-		
 	}
 	
-	@FindBy(how=How.XPATH,using="//strong[contains(text(),'Elevate Your Retiree Healthcare Benefits')]")
-	WebElement benefitsLabel;
-	@FindBy(xpath="//p[contains(text(),'The cost of retiree healthcare')]")
-	WebElement Benefits;
+	@FindBy(xpath="(//a[text()='Sign In'])[1]")
+	WebElement signInLink;
+	@FindBy(css="input#newuserregiscontinue")
+	WebElement createAccountLink;
+	@FindBy(css="input#zip")
+	WebElement zipInputBox;
+	@FindBy(css="#dobmonth")
+	WebElement  dobMonthInputBox;
+	@FindBy(css="#dobday")
+	WebElement dobDayInputBox;
+	@FindBy(css="#dobyear")
+	WebElement dobYearInputBox;
+	@FindBy(css="#eecode")
+	WebElement erCodeInputBox;
+	@FindBy(css="input#continue")
+	WebElement continueButton;
+	@FindBy(how=How.CSS,using="p.alertHighlight")
+	WebElement errorMessage;
 	
-	void getBenefitsForRetirees() throws InterruptedException
+	
+	void signUpWithWrongErCode() throws InterruptedException
 	{
-		test.log(LogStatus.PASS, "Test Started");
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(benefitsLabel));
+		signInLink.click();
+		createAccountLink.click();
+		zipInputBox.sendKeys("45175");
+		dobMonthInputBox.sendKeys("10");
+		dobDayInputBox.sendKeys("22");
+		dobYearInputBox.sendKeys("2000");
+		erCodeInputBox.sendKeys("4587975");
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView();", benefitsLabel);
-		test.log(LogStatus.PASS, "Navigated to Benefits section");
-		js.executeScript("alert(arguments[0])", Benefits.getText());
-		test.log(LogStatus.PASS, "List of Benefits displayed");
+		js.executeScript("arguments[0].click();",continueButton);
+		js.executeScript("arguments[0].setAttribute('style', 'border:2px solid blue; background:Red')", errorMessage);
 		Thread.sleep(3000);
-		driver.switchTo().alert().accept();
-		Thread.sleep(1000);
-		test.log(LogStatus.PASS, "Test Ended");
 		
 		
 	}

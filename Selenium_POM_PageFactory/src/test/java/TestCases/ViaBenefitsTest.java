@@ -5,28 +5,25 @@ import java.lang.reflect.Method;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import Base.Baseclass;
 import Pages.ViaBenefits;
 import utilities.seleniumUtilities;
 
-public class ViaBenefitsTest extends Baseclass {
-	
-	
-	
+public class ViaBenefitsTest extends Baseclass
+{
 	@Test
-	void getViaBenefitsAdvantages() throws Exception
+	void signUpOnViaBenefitsWithWrongSSN() throws Exception
 	{
-		
-		seleniumUtilities.LaunchBrowser("https://optimizeretireebenefits.com/", driver);
-		ViaBenefits ob=ViaBenefits.class.getDeclaredConstructor(WebDriver.class,ExtentTest.class).newInstance(driver,test);
-		Method m=ViaBenefits.class.getDeclaredMethod("getBenefitsForRetirees");
+		test.log(LogStatus.PASS, "Test Started");
+		seleniumUtilities.LaunchBrowser("https://www.viabenefits.com/", driver);
+		ViaBenefits ob=ViaBenefits.class.getDeclaredConstructor(WebDriver.class).newInstance(driver);
+		Method m=ViaBenefits.class.getDeclaredMethod("signUpWithWrongErCode");
 		m.setAccessible(true);
-		m.invoke(ob);
-		
-		
-		
+		m.invoke(ob);	
+		test.log(LogStatus.PASS, "Error message displayed");
+		test.log(LogStatus.PASS, "Test Ended");
 	}
 
 }
