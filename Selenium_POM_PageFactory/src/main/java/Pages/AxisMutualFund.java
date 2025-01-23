@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -31,9 +32,11 @@ public class AxisMutualFund
 	
 	String NavigateToStartASipSection()
 	{
-		closeButton.click();
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until((ExpectedCondition<Boolean>) wd ->
+		   ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
+		closeButton.click();
 		wait.until(ExpectedConditions.visibilityOf(sipLink));
 		sipLink.click();
 		String headerText=(String) js.executeScript("return arguments[0].innerHTML;", sipHeaderText);
