@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.RKMVUTest" />
+ <class name="TestCases.SeleniumBaseIo_ButtonTest" />
  </classes>
  </test>
 </suite>
