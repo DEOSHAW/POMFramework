@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.SeleniumBaseIo_ButtonTest" />
+ <class name="TestCases.RSAutomationTest" />
  </classes>
  </test>
 </suite>
