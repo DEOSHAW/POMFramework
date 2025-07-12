@@ -107,8 +107,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>
-							C:\Selenium
-							Projects\POMFramework\Selenium_POM_PageFactory\testng.xml</suiteXmlFile>
+							C:\Selenium Projects\POMFramework\Selenium_POM_PageFactory\testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
