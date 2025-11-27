@@ -23,7 +23,7 @@ public class AxisBank
 	
 	String getBackgroundBurgundyColour()
 	{
-		return Color.fromString(logo.getCssValue("color")).asHex();
+		return Color.fromString(logo.getCssValue("background-color")).asHex();
 		
 	}
 

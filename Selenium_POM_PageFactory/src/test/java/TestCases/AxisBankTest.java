@@ -23,7 +23,7 @@ public class AxisBankTest extends Baseclass
 		Method m=AxisBank.class.getDeclaredMethod("getBackgroundBurgundyColour");
 		m.setAccessible(true);
 		String backgroundColour=(String) m.invoke(ob);
-		Assert.assertEquals(backgroundColour, "#000000");
+		Assert.assertEquals(backgroundColour, "#97144d");
 		test.log(LogStatus.PASS, "background colour validation successful");
 		test.log(LogStatus.PASS, "Test Ended");
 		
