@@ -5,7 +5,7 @@
 </listeners>
  <test name="Selenium">
  <classes>
- <class name="TestCases.WebDriverUniversityTest" />
+ <class name="TestCases.IIITBTest" />
  </classes>
  </test>
 </suite>
