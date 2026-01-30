@@ -171,7 +171,7 @@ public class Baseclass {
 		//options.addArguments("--headless");
 		//options.addArguments("log-level=2");
 		driver=new ChromeDriver(options);
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		//driver.get("https://www.amazon.com");
 		//driver.navigate().to("http://demo.guru99.com/test/guru99home/");
 		//driver.navigate().to("https://www.hdfc.com");
@@ -205,9 +205,7 @@ public class Baseclass {
 		Thread.sleep(2000);
 		System.out.println("This is before method");
 		testName=m.getName();
-		System.out.println(testName);
-		
-		
+		System.out.println(testName);	
 		
 	}
 	
