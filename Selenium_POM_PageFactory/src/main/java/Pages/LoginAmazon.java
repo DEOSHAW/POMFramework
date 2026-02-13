@@ -3,6 +3,7 @@ package Pages;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
@@ -82,9 +83,9 @@ public class LoginAmazon {
 		Actions action=new Actions(ldriver);
 		action.moveToElement(Text).perform();
 		action.sendKeys(Keys.chord(Keys.ENTER));
-		ldriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		Orders.click();
-		ldriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		
 	}

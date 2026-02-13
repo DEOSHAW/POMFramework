@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -49,7 +50,7 @@ public class Amazon {
 		Username.sendKeys("deoshaw3@gmail.com");
 		Thread.sleep(2000);
 		Continue.click();
-		Amazon_Driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Amazon_Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		Password.sendKeys("Dd$03091991");
 		Thread.sleep(3000);
 		SignInSubmitButton.click();

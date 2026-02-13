@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -27,7 +28,7 @@ public class ATPTour {
 	{
 		Actions action=new Actions(ATP_Driver);
 		action.moveToElement(Rankings_Link).moveToElement(Singles_Link).click().build().perform();
-		ATP_Driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		ATP_Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		int RowNum=ATP_Driver.findElements(By.xpath("//*[@class='mega-table']//tbody//tr")).size();
 		int ColNum=ATP_Driver.findElements(By.xpath("//*[@class='mega-table']//tbody//tr[1]//td")).size();
 		System.out.println("Row count is: "+RowNum);

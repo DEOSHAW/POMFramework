@@ -1,5 +1,6 @@
 package Pages;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -25,7 +26,7 @@ public class Guru99Home {
 	{
 		JavascriptExecutor js=(JavascriptExecutor)guru_driver;
 		js.executeScript("arguments[0].scrollIntoView();", Linux_Link);
-		guru_driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		guru_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		Linux_Link.click();
 	}
 }

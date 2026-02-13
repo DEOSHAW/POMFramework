@@ -43,7 +43,7 @@ public class Caltech {
     	WebDriverWait wait=new WebDriverWait(Caltech_driver,Duration.ofSeconds(10));
     	wait.until(ExpectedConditions.elementToBeClickable(Academics_Option)).click();
     	js.executeScript("arguments[0].scrollIntoView(true);",graduatePrograms);
-    	Caltech_driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    	Caltech_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	graduatePrograms.click();
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[contains(text(),'Academics')])[3]"))).click();
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[contains(text(),'Degrees Offered')])[3]"))).click();
