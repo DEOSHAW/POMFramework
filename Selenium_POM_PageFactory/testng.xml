@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="SeleniumAutomation">
+<suite name="SeleniumAutomation" verbose="0">
 <listeners>
 <listener class-name="Base.ListenersClass"/>
 </listeners>
